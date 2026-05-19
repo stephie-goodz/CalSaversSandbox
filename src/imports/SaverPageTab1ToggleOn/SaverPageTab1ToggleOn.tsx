@@ -36,7 +36,7 @@ function Frame6() {
       <p className="font-['Poppins',sans-serif] italic leading-[24px] relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full min-w-0 break-words">Need a simplified walk-though?</p>
       <div className="content-stretch flex items-start relative shrink-0 w-full" data-name="QuickViewToggle">
         <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Toggle Switch">
-          <p className="font-['Poppins:SemiBold',sans-serif] leading-[24px] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[1px] min-w-0 break-words">Toggle Quick Overview Instructions</p>
+          <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[1px] min-w-0 break-words">Toggle Quick Overview Instructions</p>
           <Group4 />
         </div>
       </div>
@@ -47,7 +47,7 @@ function Frame6() {
 function StepText() {
   return (
     <div className="content-stretch justify-between flex gap-[8px] items-start relative shrink-0 w-full z-[3]" data-name="StepText">
-      <p className="flex-[1_0_0] font-['Poppins:Medium',sans-serif] leading-[32px] min-w-px not-italic relative text-[20px] text-black tracking-[1px]">How to Register for CalSavers</p>
+      <p className="flex-[1_0_0] font-['Poppins',sans-serif] font-medium leading-[32px] min-w-px not-italic relative text-[20px] text-black tracking-[1px]">How to Register for CalSavers</p>
       <Frame6 />
     </div>
   );
@@ -56,7 +56,7 @@ function StepText() {
 function NumberContainer() {
   return (
     <div className="bg-[#80641f] content-stretch flex flex-col items-center justify-center p-[8px] relative rounded-[32px] shrink-0 size-[32px]" data-name="Number Container">
-      <p className="font-['Poppins:Medium',sans-serif] leading-[21px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[1px] w-full">1</p>
+      <p className="font-['Poppins',sans-serif] font-medium leading-[21px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[1px] w-full">1</p>
     </div>
   );
 }
@@ -64,8 +64,8 @@ function NumberContainer() {
 function TextContainer() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start leading-[24px] not-italic relative shrink-0 text-[16px] tracking-[1px] w-full" data-name="Text Container">
-      <p className="font-['Poppins:SemiBold',sans-serif] relative shrink-0 text-black w-full">{`Set Up Your Account Online `}</p>
-      <p className="font-['Poppins:Regular',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">{`You can sign up through your employer after they register and a welcome packet is sent. If you are self-employed, a gig worker or don't work for an employer registered with CalSavers, you can also contribute directly. `}</p>
+      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">{`Set Up Your Account Online `}</p>
+      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">{`You can sign up through your employer after they register and a welcome packet is sent. If you are self-employed, a gig worker or don't work for an employer registered with CalSavers, you can also contribute directly. `}</p>
     </div>
   );
 }
@@ -76,7 +76,7 @@ function Container4() {
       <TextContainer />
       <a className="bg-[#00594f] content-stretch cursor-pointer flex gap-[8px] items-center justify-center px-[16px] py-[8px] relative rounded-[4px] shrink-0" href="https://employer.calsavers.com/californiaertpl/enroll/createEmp/viewCollectEmpPreRegDetails.cs?request_locale=en_US" target="_blank" data-name="Button">
         <div aria-hidden="true" className="absolute border border-[#00473f] border-solid inset-[-0.5px] pointer-events-none rounded-[4.5px]" />
-        <div className="flex flex-col font-['Poppins:SemiBold',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-center text-white tracking-[1px] whitespace-nowrap">
+        <div className="flex flex-col font-['Poppins',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-center text-white tracking-[1px] whitespace-nowrap">
           <p className="leading-[24px]">Get Started</p>
         </div>
       </a>
@@ -101,7 +101,7 @@ function Step() {
 function NumberContainer1() {
   return (
     <div className="bg-[#80641f] content-stretch flex flex-col items-center justify-center p-[8px] relative rounded-[32px] shrink-0 size-[32px]" data-name="Number Container">
-      <p className="font-['Poppins:Medium',sans-serif] leading-[21px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[1px] w-full">2</p>
+      <p className="font-['Poppins',sans-serif] font-medium leading-[21px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[1px] w-full">2</p>
     </div>
   );
 }
@@ -109,8 +109,8 @@ function NumberContainer1() {
 function TextContainer1() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start leading-[24px] min-w-px not-italic relative text-[16px] tracking-[1px]" data-name="Text Container">
-      <p className="font-['Poppins:SemiBold',sans-serif] relative shrink-0 text-black w-full">Review Your Contribution Percentage</p>
-      <p className="font-['Poppins:Regular',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">Navigate to the Contributions page in your account and confirm the default contribution percentage or enter a new amount. Save your changes to ensure future payroll deductions reflect your selection</p>
+      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Review Your Contribution Percentage</p>
+      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">Navigate to the Contributions page in your account and confirm the default contribution percentage or enter a new amount. Save your changes to ensure future payroll deductions reflect your selection</p>
     </div>
   );
 }
@@ -141,7 +141,7 @@ function Row() {
 function NumberContainer2() {
   return (
     <div className="bg-[#80641f] content-stretch flex flex-col items-center justify-center p-[8px] relative rounded-[32px] shrink-0 size-[32px]" data-name="Number Container">
-      <p className="font-['Poppins:Medium',sans-serif] leading-[21px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[1px] w-full">3</p>
+      <p className="font-['Poppins',sans-serif] font-medium leading-[21px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[1px] w-full">3</p>
     </div>
   );
 }
@@ -149,8 +149,8 @@ function NumberContainer2() {
 function TextContainer2() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start leading-[24px] min-w-px not-italic relative text-[16px] tracking-[1px]" data-name="Text Container">
-      <p className="font-['Poppins:SemiBold',sans-serif] relative shrink-0 text-black w-full">Review Your Investment Options</p>
-      <p className="font-['Poppins:Regular',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">Go to the investments section of your account. Review the available investment options and choose the default investment options or adjust investments and confirm your choice.</p>
+      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Review Your Investment Options</p>
+      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">Go to the investments section of your account. Review the available investment options and choose the default investment options or adjust investments and confirm your choice.</p>
     </div>
   );
 }
@@ -172,7 +172,7 @@ function Step2() {
 function NumberContainer3() {
   return (
     <div className="bg-[#80641f] content-stretch flex flex-col items-center justify-center p-[8px] relative rounded-[32px] shrink-0 size-[32px]" data-name="Number Container">
-      <p className="font-['Poppins:Medium',sans-serif] leading-[21px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[1px] w-full">4</p>
+      <p className="font-['Poppins',sans-serif] font-medium leading-[21px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[1px] w-full">4</p>
     </div>
   );
 }
@@ -180,8 +180,8 @@ function NumberContainer3() {
 function TextContainer3() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start leading-[24px] min-w-px not-italic relative text-[16px] tracking-[1px]" data-name="Text Container">
-      <p className="font-['Poppins:SemiBold',sans-serif] relative shrink-0 text-black w-full">Set Up Your Beneficiaries</p>
-      <p className="font-['Poppins:Regular',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">Go to the Beneficiaries section in your dashboard. Enter the required information for the beneficiary and save your selections.</p>
+      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Set Up Your Beneficiaries</p>
+      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">Go to the Beneficiaries section in your dashboard. Enter the required information for the beneficiary and save your selections.</p>
     </div>
   );
 }
@@ -238,10 +238,10 @@ function Group1() {
 function Text7() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start leading-[0] min-w-px not-italic relative text-[16px] text-black tracking-[1px]" data-name="Text">
-      <div className="flex flex-col font-['Poppins:SemiBold',sans-serif] justify-center relative shrink-0 w-full">
+      <div className="flex flex-col font-['Poppins',sans-serif] font-semibold justify-center relative shrink-0 w-full">
         <p className="leading-[24px]">Need more help?</p>
       </div>
-      <div className="flex flex-col font-['Poppins:Regular',sans-serif] justify-center relative shrink-0 w-full">
+      <div className="flex flex-col font-['Poppins',sans-serif] justify-center relative shrink-0 w-full">
         <p className="leading-[24px]">The CalSavers Saver Resource page offers recorded webinars, brochures, calculators and forms to help you learn more about saving and managing your CalSavers IRA.</p>
       </div>
     </div>
@@ -264,7 +264,7 @@ export function SignUpToggleOnBody() {
               <Text7 />
               <div className="bg-white content-stretch flex gap-[8px] items-center justify-center px-[16px] py-[8px] relative rounded-[4px] shrink-0" data-name="Button">
                 <div aria-hidden="true" className="absolute border border-[#00594f] border-solid inset-[-0.5px] pointer-events-none rounded-[4.5px]" />
-                <div className="flex flex-col font-['Poppins:SemiBold',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#00594f] text-[16px] text-center tracking-[1px] whitespace-nowrap">
+                <div className="flex flex-col font-['Poppins',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#00594f] text-[16px] text-center tracking-[1px] whitespace-nowrap">
                   <p className="leading-[24px]">Go to Saver Resources</p>
                 </div>
               </div>

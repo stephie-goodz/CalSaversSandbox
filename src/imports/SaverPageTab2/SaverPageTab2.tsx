@@ -9,7 +9,7 @@ import svgPaths from "./svg-c8jbgef0pk";
 function StepText() {
   return (
     <div className="content-stretch flex gap-[8px] items-start relative shrink-0 w-full" data-name="StepText">
-      <p className="flex-[1_0_0] font-['Poppins:Medium',sans-serif] leading-[32px] min-w-px not-italic relative text-[20px] text-black tracking-[1px]">Opting-out of the CalSavers program</p>
+      <p className="flex-[1_0_0] font-['Poppins',sans-serif] font-medium leading-[32px] min-w-px not-italic relative text-[20px] text-black tracking-[1px]">Opting-out of the CalSavers program</p>
     </div>
   );
 }
@@ -29,12 +29,12 @@ function Check18() {
 function BenefitText4() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[6px] items-start leading-[0] min-w-px not-italic relative text-black tracking-[1px]" data-name="BenefitText">
-      <div className="flex flex-col font-['Poppins:SemiBold',sans-serif] justify-center relative shrink-0 text-[16px] w-full">
+      <div className="flex flex-col font-['Poppins',sans-serif] font-semibold justify-center relative shrink-0 text-[16px] w-full">
         <p className="leading-[24px]">Online</p>
       </div>
-      <div className="flex flex-col font-['Poppins:Regular',sans-serif] justify-center relative shrink-0 text-[0px] w-full">
+      <div className="flex flex-col font-['Poppins',sans-serif] justify-center relative shrink-0 text-[0px] w-full">
         <p className="text-[16px]">
-          <a className="cursor-pointer decoration-solid font-['Poppins:SemiBold',sans-serif] leading-[24px] not-italic text-[#00594f] tracking-[1px] underline" href="https://saver.calsavers.com/californiaeetpl/auth/sessionCreate/viewCollectUsername.cs?request_locale=en_US" target="_blank">
+          <a className="cursor-pointer decoration-solid font-['Poppins',sans-serif] font-semibold leading-[24px] not-italic text-[#00594f] tracking-[1px] underline" href="https://saver.calsavers.com/californiaeetpl/auth/sessionCreate/viewCollectUsername.cs?request_locale=en_US" target="_blank">
             <span className="decoration-solid underline" href="https://saver.calsavers.com/californiaeetpl/auth/sessionCreate/viewCollectUsername.cs?request_locale=en_US" target="_blank">
               Log in
             </span>
@@ -70,10 +70,10 @@ function Check19() {
 function BenefitText5() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[6px] items-start leading-[0] min-w-px not-italic relative text-[16px] text-black tracking-[1px]" data-name="BenefitText">
-      <div className="flex flex-col font-['Poppins:SemiBold',sans-serif] justify-center relative shrink-0 w-full">
+      <div className="flex flex-col font-['Poppins',sans-serif] font-semibold justify-center relative shrink-0 w-full">
         <p className="leading-[24px]">By Phone</p>
       </div>
-      <div className="flex flex-col font-['Poppins:Regular',sans-serif] justify-center relative shrink-0 w-full">
+      <div className="flex flex-col font-['Poppins',sans-serif] justify-center relative shrink-0 w-full">
         <p className="leading-[24px]">Call our automated phone system at (855) 650-6918 and follow the prompts.</p>
       </div>
     </div>
@@ -104,13 +104,13 @@ function Check20() {
 function BenefitText6() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[6px] items-start leading-[0] min-w-px not-italic relative tracking-[1px]" data-name="BenefitText">
-      <div className="flex flex-col font-['Poppins:SemiBold',sans-serif] justify-center relative shrink-0 text-[16px] text-black w-full">
+      <div className="flex flex-col font-['Poppins',sans-serif] font-semibold justify-center relative shrink-0 text-[16px] text-black w-full">
         <p className="leading-[24px]">Mailing a Completed Form</p>
       </div>
-      <div className="flex flex-col font-['Poppins:Regular',sans-serif] justify-center relative shrink-0 text-[#6b6b6b] text-[0px] w-full">
+      <div className="flex flex-col font-['Poppins',sans-serif] justify-center relative shrink-0 text-[#6b6b6b] text-[0px] w-full">
         <p className="text-[16px]">
           <span className="leading-[24px] text-black">{`Download, complete, and mail-in a `}</span>
-          <span className="[text-decoration-skip-ink:none] decoration-solid font-['Poppins:SemiBold',sans-serif] leading-[24px] not-italic text-[#00594f] tracking-[1px] underline">paper opt-out form</span>
+          <span className="[text-decoration-skip-ink:none] decoration-solid font-['Poppins',sans-serif] font-semibold leading-[24px] not-italic text-[#00594f] tracking-[1px] underline">paper opt-out form</span>
         </p>
       </div>
     </div>
@@ -139,7 +139,7 @@ function BenefitContainer1() {
 function Requirement() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-name="Requirement">
-      <div className="flex flex-col font-['Poppins:SemiBold',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-black tracking-[1px] w-full">
+      <div className="flex flex-col font-['Poppins',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-black tracking-[1px] w-full">
         <p className="leading-[24px]">Ways to opt-out of CalSavers:</p>
       </div>
       <BenefitContainer1 />
@@ -150,10 +150,10 @@ function Requirement() {
 function Text7() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start leading-[0] min-w-px not-italic relative text-[16px] text-black tracking-[1px]" data-name="Text">
-      <div className="flex flex-col font-['Poppins:SemiBold',sans-serif] justify-center relative shrink-0 w-full">
+      <div className="flex flex-col font-['Poppins',sans-serif] font-semibold justify-center relative shrink-0 w-full">
         <p className="leading-[24px]">Need more help?</p>
       </div>
-      <div className="flex flex-col font-['Poppins:Regular',sans-serif] justify-center relative shrink-0 w-full">
+      <div className="flex flex-col font-['Poppins',sans-serif] justify-center relative shrink-0 w-full">
         <p className="leading-[24px]">The CalSavers Saver Resource page offers recorded webinars, brochures, calculators and forms to help you learn more about saving and managing your CalSavers IRA.</p>
       </div>
     </div>
@@ -169,7 +169,7 @@ export function OptOutBody() {
     <div className="bg-white relative rounded-bl-[8px] rounded-br-[8px] rounded-tr-[8px] shrink-0 w-full z-[1]" data-name="Body">
       <div className="content-stretch flex flex-col gap-[24px] items-start overflow-clip px-[48px] py-[56px] relative rounded-[inherit] size-full">
         <StepText />
-        <div className="font-['Poppins:Regular',sans-serif] leading-[0] not-italic relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full whitespace-pre-wrap">
+        <div className="font-['Poppins',sans-serif] leading-[0] not-italic relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full whitespace-pre-wrap">
           <p className="leading-[24px] mb-0">You can opt out of CalSavers at any time, but you must be added to CalSavers by an employer before you can opt out. You must complete one of the following methods to opt-out or you will be automatically enrolled with the standard savings and investment options 30 days after the welcome packet is sent.</p>
           <p className="leading-[24px] mb-0">​</p>
           <p className="leading-[24px]">If you change your mind, you can opt back in at any time through the same methods.</p>
@@ -182,7 +182,7 @@ export function OptOutBody() {
               <Text7 />
               <div className="bg-white content-stretch flex gap-[8px] items-center justify-center px-[16px] py-[8px] relative rounded-[4px] shrink-0" data-name="Button">
                 <div aria-hidden="true" className="absolute border border-[#00594f] border-solid inset-[-0.5px] pointer-events-none rounded-[4.5px]" />
-                <div className="flex flex-col font-['Poppins:SemiBold',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#00594f] text-[16px] text-center tracking-[1px] whitespace-nowrap">
+                <div className="flex flex-col font-['Poppins',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#00594f] text-[16px] text-center tracking-[1px] whitespace-nowrap">
                   <p className="leading-[24px]">Go to Saver Resources</p>
                 </div>
               </div>

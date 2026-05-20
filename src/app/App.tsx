@@ -301,7 +301,7 @@ export default function App() {
         }
 
         [data-name="Footer"] > div {
-        max-width: 1140px;
+        max-width: 66.66%;
         width: 100%;
           margin-left: auto !important;
           margin-right: auto !important;

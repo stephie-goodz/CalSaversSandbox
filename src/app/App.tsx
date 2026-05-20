@@ -156,7 +156,7 @@ export default function App() {
         container.removeEventListener('change', handleChange);
       };
     }
-  }, [integrationMode, activeTab, active180Tab]);
+  }, [integrationMode, activeTab, active180Tab, currentPage]);
 
   // Apply accordion states to the DOM after render
   useEffect(() => {
@@ -214,7 +214,7 @@ export default function App() {
         }
       }
     });
-  }, [expandedAccordions, activeTab, tab2Toggle, tab3Toggle, active180Tab, toggle180, integrationMode]);
+  }, [expandedAccordions, activeTab, tab2Toggle, tab3Toggle, active180Tab, toggle180, integrationMode, currentPage]);
 
   // Determine which body content component to render
   let BodyContent;
@@ -719,7 +719,7 @@ export default function App() {
 
            /* Accordion Body */
           [data-name="Accordion"] [data-name^="Step="] > div > div{
-            padding: 24px 16px !important;
+            padding: 16px 16px !important;
           }
 
           /* All grid layouts to flex column on mobile */

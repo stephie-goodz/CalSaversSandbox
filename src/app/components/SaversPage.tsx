@@ -212,7 +212,14 @@ export default function SaversPage() {
                 <select
                   className="w-full bg-white border-2 border-[#00594f] rounded-lg px-4 py-3 font-['Poppins',sans-serif] font-semibold text-[16px] text-black tracking-[1px] appearance-none cursor-pointer"
                   value={activeTab}
-                  onChange={() => {}}
+                  onChange={(e) => {
+                    if (e.target.value === 'signup') {
+                      setActiveTab('signup');
+                      setToggleOn(false);
+                    } else if (e.target.value === 'optout') {
+                      setActiveTab('optout');
+                    }
+                  }}
                   data-name="TabDropdown"
                   style={{
                     backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2300594f' d='M6 9L1 4h10z'/%3E%3C/svg%3E\")",
@@ -495,6 +502,7 @@ export default function SaversPage() {
             flex-direction: column !important;
             gap: 16px !important;
             width: 100%;
+            align-items: flex-start;
           }
 
           /* Hero section */

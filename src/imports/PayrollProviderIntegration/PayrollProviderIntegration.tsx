@@ -429,6 +429,7 @@ function MobileDropdown({ integrationMode = '360', activeTab = 1, active180Tab =
     ];
     return (
       <div className="md:hidden w-full mb-4 z-[2]" data-name="Tabs">
+        <p className="font-['Poppins',sans-serif] font-medium text-[12px] text-[#6b6b6b] mb-1">Choose an integration detail</p>
         <select
           className="w-full bg-white border-2 border-[#00594f] rounded-lg px-4 py-3 font-['Poppins',sans-serif] font-semibold text-[16px] text-black tracking-[1px] appearance-none cursor-pointer"
           value={active180Tab}
@@ -460,6 +461,7 @@ function MobileDropdown({ integrationMode = '360', activeTab = 1, active180Tab =
 
   return (
     <div className="md:hidden w-full mb-4 z-[2]" data-name="Tabs">
+      <p className="font-['Poppins',sans-serif] font-medium text-[12px] text-[#6b6b6b] mb-1">Choose an integration detail</p>
       <select
         className="w-full bg-white border-2 border-[#00594f] rounded-lg px-4 py-3 font-['Poppins',sans-serif] font-semibold text-[16px] text-black tracking-[1px] appearance-none cursor-pointer m-[0px]"
         value={activeTab}

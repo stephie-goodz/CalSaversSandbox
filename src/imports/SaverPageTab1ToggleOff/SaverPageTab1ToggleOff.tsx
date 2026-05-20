@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from "react";
 import { ImageWithFallback } from "../../app/components/figma/ImageWithFallback";
 import svgPaths from "./svg-2v9jfvim3f";
 import imgImage from "./e6337aeab3bb45ac2079bf30c5c5036f12b0d253.png";
@@ -134,11 +135,11 @@ function Check3() {
   );
 }
 
-function Dropdown() {
+function Dropdown({ isOpen = false }: { isOpen?: boolean }) {
   return (
-    <div className="absolute bg-white h-0 left-0 rounded-[4px] top-[37px] w-[100px]" data-name="Dropdown">
-      <div className="overflow-clip rounded-[inherit] size-full">
-        <div className="content-stretch flex flex-col items-start py-[8px] relative size-full">
+    <div className={`absolute bg-white left-0 rounded-[8px] top-[37px] min-w-[200px] z-50 shadow-md ${isOpen ? '' : 'hidden'}`} data-name="Dropdown">
+      <div className="rounded-[inherit] w-full">
+        <div className="content-stretch flex flex-col items-start py-[8px] relative w-full">
           <a className="cursor-pointer relative shrink-0 w-full" href="https://employer.calsavers.com/californiaertpl/enroll/createEmp/viewCollectEmpPreRegDetails.cs?request_locale=en_US" target="_blank" data-name="Dropdown-LineItem">
             <div className="flex flex-row items-center justify-center size-full">
               <div className="content-stretch flex gap-[8px] items-center justify-center px-[24px] py-[8px] relative size-full">
@@ -181,7 +182,7 @@ function Dropdown() {
           </a>
         </div>
       </div>
-      <div aria-hidden="true" className="absolute border border-[#c3c3c3] border-solid inset-0 pointer-events-none rounded-[4px]" />
+      <div aria-hidden="true" className="absolute border border-[#c3c3c3] border-solid inset-0 pointer-events-none rounded-[8px]" />
     </div>
   );
 }
@@ -259,11 +260,11 @@ function Check8() {
   );
 }
 
-function Dropdown1() {
+function Dropdown1({ isOpen = false }: { isOpen?: boolean }) {
   return (
-    <div className="absolute bg-white h-0 left-0 rounded-[4px] top-[37px] w-[100px]" data-name="Dropdown">
-      <div className="overflow-clip rounded-[inherit] size-full">
-        <div className="content-stretch cursor-pointer flex flex-col items-start py-[8px] relative size-full">
+    <div className={`absolute bg-white left-0 rounded-[8px] top-[37px] min-w-[200px] z-50 shadow-md ${isOpen ? '' : 'hidden'}`} data-name="Dropdown">
+      <div className="rounded-[inherit] w-full">
+        <div className="content-stretch cursor-pointer flex flex-col items-start py-[8px] relative w-full">
           <button className="relative shrink-0 w-full" data-name="Dropdown-LineItem">
             <div className="flex flex-row items-center justify-center size-full">
               <div className="content-stretch flex gap-[8px] items-center justify-center px-[24px] py-[8px] relative size-full">
@@ -316,21 +317,36 @@ function Dropdown1() {
           </button>
         </div>
       </div>
-      <div aria-hidden="true" className="absolute border border-[#c3c3c3] border-solid inset-0 pointer-events-none rounded-[4px]" />
+      <div aria-hidden="true" className="absolute border border-[#c3c3c3] border-solid inset-0 pointer-events-none rounded-[8px]" />
     </div>
   );
 }
 
 function NavLinks() {
+  const [openDropdown, setOpenDropdown] = useState<'employers' | 'savers' | null>(null);
+  const navRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const handleOutside = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setOpenDropdown(null);
+      }
+    };
+    document.addEventListener('mousedown', handleOutside);
+    return () => document.removeEventListener('mousedown', handleOutside);
+  }, []);
   return (
-    <div className="content-stretch flex items-center relative shrink-0" data-name="NavLinks">
-      <div className="content-stretch flex items-center justify-center overflow-clip relative rounded-[4px] shrink-0" data-name="EmployerNav">
-        <Container />
-        <Dropdown />
+    <div ref={navRef} className="content-stretch flex items-center relative shrink-0" data-name="NavLinks">
+      <div className="content-stretch flex items-center justify-center overflow-visible relative rounded-[4px] shrink-0" data-name="EmployerNav">
+        <button onClick={() => setOpenDropdown(openDropdown === 'employers' ? null : 'employers')}>
+          <Container />
+        </button>
+        <Dropdown isOpen={openDropdown === 'employers'} />
       </div>
-      <div className="content-stretch flex items-center justify-center overflow-clip relative rounded-[4px] shrink-0" data-name="NavigationLink">
-        <Container1 />
-        <Dropdown1 />
+      <div className="content-stretch flex items-center justify-center overflow-visible relative rounded-[4px] shrink-0" data-name="NavigationLink">
+        <button onClick={() => setOpenDropdown(openDropdown === 'savers' ? null : 'savers')}>
+          <Container1 />
+        </button>
+        <Dropdown1 isOpen={openDropdown === 'savers'} />
       </div>
       <div className="content-stretch flex items-center justify-center px-[16px] py-[8px] relative rounded-[4px] shrink-0" data-name="NavigationLink">
         <div className="flex flex-col font-['Poppins',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-black text-center uppercase whitespace-nowrap">
@@ -494,10 +510,81 @@ function InnerContainer1() {
 }
 
 function SecondaryNav() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileEmpOpen, setMobileEmpOpen] = useState(false);
+  const [mobileSavOpen, setMobileSavOpen] = useState(false);
   return (
     <div className="bg-[#f2f2f2] content-stretch flex flex-col items-center py-[8px] relative shrink-0 w-full" data-name="SecondaryNav">
       <div aria-hidden="true" className="absolute border border-[#c3c3c3] border-solid inset-0 pointer-events-none" />
-      <InnerContainer1 />
+      <div className="content-stretch flex items-center justify-between max-w-[66.66%] relative shrink-0 w-full" data-name="InnerContainer">
+        {/* Hamburger — mobile only, left of language dropdown */}
+        <button
+          className="md:hidden p-2"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Open navigation menu"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.5 4.5C1.5 3.67031 2.17031 3 3 3H21C21.8297 3 22.5 3.67031 22.5 4.5C22.5 5.32969 21.8297 6 21 6H3C2.17031 6 1.5 5.32969 1.5 4.5ZM1.5 12C1.5 11.1703 2.17031 10.5 3 10.5H21C21.8297 10.5 22.5 11.1703 22.5 12C22.5 12.8297 21.8297 13.5 21 13.5H3C2.17031 13.5 1.5 12.8297 1.5 12ZM22.5 19.5C22.5 20.3297 21.8297 21 21 21H3C2.17031 21 1.5 20.3297 1.5 19.5C1.5 18.6703 2.17031 18 3 18H21C21.8297 18 22.5 18.6703 22.5 19.5Z" fill="#343A40"/>
+          </svg>
+        </button>
+        {/* Desktop nav links */}
+        <NavLinks />
+        {/* Language dropdown — always visible */}
+        <div className="content-stretch flex items-center justify-center overflow-clip relative rounded-[4px] shrink-0" data-name="NavigationLink">
+          <Container2 />
+          <Dropdown2 />
+        </div>
+      </div>
+      {/* Mobile navigation panel */}
+      {mobileOpen && (
+        <div className="md:hidden absolute bg-white left-0 top-full w-full z-40 shadow-lg border-t border-[#c3c3c3]">
+          <div>
+            <button
+              className="flex items-center justify-between w-full px-6 py-3 font-['Poppins',sans-serif] font-medium text-[14px] uppercase text-black"
+              onClick={() => setMobileEmpOpen(!mobileEmpOpen)}
+            >
+              <span>Employers</span>
+              <ChevronDown />
+            </button>
+            {mobileEmpOpen && (
+              <div className="px-6 py-2 flex flex-col">
+                <a className="font-['Poppins',sans-serif] font-medium text-[14px] uppercase text-black py-2" href="https://employer.calsavers.com/californiaertpl/enroll/createEmp/viewCollectEmpPreRegDetails.cs?request_locale=en_US" target="_blank">Register</a>
+                <span className="font-['Poppins',sans-serif] font-medium text-[14px] uppercase text-black py-2">How to Register and Run</span>
+                <span className="font-['Poppins',sans-serif] font-medium text-[14px] uppercase text-black py-2">Program Resources</span>
+                <a className="font-['Poppins',sans-serif] font-medium text-[14px] uppercase text-black py-2" href="https://employer.calsavers.com/home/employers/support.html" target="_blank">Employer Support</a>
+              </div>
+            )}
+          </div>
+          <div>
+            <button
+              className="flex items-center justify-between w-full px-6 py-3 font-['Poppins',sans-serif] font-medium text-[14px] uppercase text-black"
+              onClick={() => setMobileSavOpen(!mobileSavOpen)}
+            >
+              <span>Savers</span>
+              <ChevronDown />
+            </button>
+            {mobileSavOpen && (
+              <div className="px-6 py-2 flex flex-col">
+                <span className="font-['Poppins',sans-serif] font-medium text-[14px] uppercase text-black py-2">Line Item</span>
+                <span className="font-['Poppins',sans-serif] font-medium text-[14px] uppercase text-black py-2">Line Item</span>
+                <span className="font-['Poppins',sans-serif] font-medium text-[14px] uppercase text-black py-2">Line Item</span>
+                <span className="font-['Poppins',sans-serif] font-medium text-[14px] uppercase text-black py-2">Line Item</span>
+                <span className="font-['Poppins',sans-serif] font-medium text-[14px] uppercase text-black py-2">Line Item</span>
+              </div>
+            )}
+          </div>
+          <div className="font-['Poppins',sans-serif] font-medium text-[14px] uppercase text-black px-6 py-3">About</div>
+          <div className="font-['Poppins',sans-serif] font-medium text-[14px] uppercase text-black px-6 py-3">Help Center</div>
+          <div className="flex gap-4 px-6 py-4 border-t border-[#c3c3c3]">
+            <div className="bg-white flex gap-[8px] items-center justify-center px-[16px] py-[8px] relative rounded-[4px] border border-[#00594f]">
+              <span className="font-['Poppins',sans-serif] font-semibold text-[#00594f] text-[16px] tracking-[1px]">Register</span>
+            </div>
+            <a className="bg-[#00594f] flex gap-[8px] items-center justify-center px-[16px] py-[8px] relative rounded-[4px] border border-[#00473f]" href="https://saver.calsavers.com/californiaeetpl/auth/sessionCreate/viewCollectUsername.cs?request_locale=en_US" target="_blank">
+              <span className="font-['Poppins',sans-serif] font-semibold text-white text-[16px] tracking-[1px]">Login</span>
+            </a>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

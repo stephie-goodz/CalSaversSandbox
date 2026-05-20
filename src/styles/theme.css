@@ -208,20 +208,21 @@
 }
 
 /* --- Accordions (collapsed and expanded headers) --- */
+[data-name="Accordion/expanded"]:hover,
+[data-name="Accordion/collapsed"]:hover {
+  background-color: #F2F6F6 !important;
+  --fill-0: #00473F;
+}
+
 [data-name="Accordion/expanded"]:hover > div[aria-hidden="true"],
 [data-name="Accordion/collapsed"]:hover > div[aria-hidden="true"] {
   border: 1px solid #00473F !important;
 }
 
-[data-name="Accordion/expanded"]:hover [data-name="Text Container"] p,
-[data-name="Accordion/collapsed"]:hover [data-name="Text Container"] p {
+[data-name="Accordion/expanded"]:hover [data-name="Text Container"] p:last-child,
+[data-name="Accordion/collapsed"]:hover [data-name="Text Container"] p:last-child {
   color: #00473F !important;
   text-decoration-line: underline !important;
-}
-
-[data-name="Accordion/expanded"]:hover,
-[data-name="Accordion/collapsed"]:hover {
-  --fill-0: #00473F;
 }
 
 /* --- Text Links --- */

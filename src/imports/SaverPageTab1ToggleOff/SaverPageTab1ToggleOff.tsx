@@ -105,6 +105,16 @@ function Check() {
   );
 }
 
+function CheckOverview() {
+  return (
+    <div className="relative shrink-0 size-0" data-name="check">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 0.0001 0.0001">
+        <g id="check" />
+      </svg>
+    </div>
+  );
+}
+
 function Check1() {
   return (
     <div className="relative shrink-0 size-0" data-name="check">
@@ -137,9 +147,19 @@ function Check3() {
 
 function Dropdown({ isOpen = false }: { isOpen?: boolean }) {
   return (
-    <div className={`absolute bg-white left-0 rounded-[8px] top-[37px] min-w-[200px] z-50 shadow-md ${isOpen ? '' : 'hidden'}`} data-name="Dropdown">
+    <div className={`absolute bg-white left-0 rounded-[8px] top-[37px] min-w-[280px] z-50 shadow-md ${isOpen ? '' : 'hidden'}`} data-name="Dropdown">
       <div className="rounded-[inherit] w-full">
         <div className="content-stretch flex flex-col items-start py-[8px] relative w-full">
+          <div className="relative shrink-0 w-full" data-name="Dropdown-LineItem">
+            <div className="flex flex-row items-center justify-center size-full">
+              <div className="content-stretch flex gap-[8px] items-center justify-center px-[24px] py-[8px] relative size-full">
+                <CheckOverview />
+                <div className="flex flex-[1_0_0] flex-col font-['Poppins',sans-serif] font-medium justify-center leading-[0] min-w-px not-italic relative text-[16px] text-black uppercase">
+                  <p className="leading-[24px]">Overview</p>
+                </div>
+              </div>
+            </div>
+          </div>
           <a className="cursor-pointer relative shrink-0 w-full" href="https://employer.calsavers.com/californiaertpl/enroll/createEmp/viewCollectEmpPreRegDetails.cs?request_locale=en_US" target="_blank" data-name="Dropdown-LineItem">
             <div className="flex flex-row items-center justify-center size-full">
               <div className="content-stretch flex gap-[8px] items-center justify-center px-[24px] py-[8px] relative size-full">
@@ -262,7 +282,7 @@ function Check8() {
 
 function Dropdown1({ isOpen = false }: { isOpen?: boolean }) {
   return (
-    <div className={`absolute bg-white left-0 rounded-[8px] top-[37px] min-w-[200px] z-50 shadow-md ${isOpen ? '' : 'hidden'}`} data-name="Dropdown">
+    <div className={`absolute bg-white left-0 rounded-[8px] top-[37px] min-w-[280px] z-50 shadow-md ${isOpen ? '' : 'hidden'}`} data-name="Dropdown">
       <div className="rounded-[inherit] w-full">
         <div className="content-stretch cursor-pointer flex flex-col items-start py-[8px] relative w-full">
           <button className="relative shrink-0 w-full" data-name="Dropdown-LineItem">
@@ -270,7 +290,7 @@ function Dropdown1({ isOpen = false }: { isOpen?: boolean }) {
               <div className="content-stretch flex gap-[8px] items-center justify-center px-[24px] py-[8px] relative size-full">
                 <Check4 />
                 <div className="flex flex-[1_0_0] flex-col font-['Poppins',sans-serif] font-medium justify-center leading-[0] min-w-px not-italic relative text-[16px] text-black text-left uppercase">
-                  <p className="leading-[24px]">Line Item</p>
+                  <p className="leading-[24px]">Overview</p>
                 </div>
               </div>
             </div>
@@ -280,7 +300,7 @@ function Dropdown1({ isOpen = false }: { isOpen?: boolean }) {
               <div className="content-stretch flex gap-[8px] items-center justify-center px-[24px] py-[8px] relative size-full">
                 <Check5 />
                 <div className="flex flex-[1_0_0] flex-col font-['Poppins',sans-serif] font-medium justify-center leading-[0] min-w-px not-italic relative text-[16px] text-black text-left uppercase">
-                  <p className="leading-[24px]">Line Item</p>
+                  <p className="leading-[24px]">Savers Program Details</p>
                 </div>
               </div>
             </div>
@@ -290,7 +310,7 @@ function Dropdown1({ isOpen = false }: { isOpen?: boolean }) {
               <div className="content-stretch flex gap-[8px] items-center justify-center px-[24px] py-[8px] relative size-full">
                 <Check6 />
                 <div className="flex flex-[1_0_0] flex-col font-['Poppins',sans-serif] font-medium justify-center leading-[0] min-w-px not-italic relative text-[16px] text-black text-left uppercase">
-                  <p className="leading-[24px]">Line Item</p>
+                  <p className="leading-[24px]">Resources</p>
                 </div>
               </div>
             </div>
@@ -300,7 +320,7 @@ function Dropdown1({ isOpen = false }: { isOpen?: boolean }) {
               <div className="content-stretch flex gap-[8px] items-center justify-center px-[24px] py-[8px] relative size-full">
                 <Check7 />
                 <div className="flex flex-[1_0_0] flex-col font-['Poppins',sans-serif] font-medium justify-center leading-[0] min-w-px not-italic relative text-[16px] text-black text-left uppercase">
-                  <p className="leading-[24px]">Line Item</p>
+                  <p className="leading-[24px]">Financial Education</p>
                 </div>
               </div>
             </div>
@@ -310,7 +330,7 @@ function Dropdown1({ isOpen = false }: { isOpen?: boolean }) {
               <div className="content-stretch flex gap-[8px] items-center justify-center px-[24px] py-[8px] relative size-full">
                 <Check8 />
                 <div className="flex flex-[1_0_0] flex-col font-['Poppins',sans-serif] font-medium justify-center leading-[0] min-w-px not-italic relative text-[16px] text-black text-left uppercase">
-                  <p className="leading-[24px]">Line Item</p>
+                  <p className="leading-[24px]">Withdrawals</p>
                 </div>
               </div>
             </div>

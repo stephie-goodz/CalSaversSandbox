@@ -494,6 +494,7 @@ export default function SaversPage() {
           [data-name="Card"] [data-name="Button Group"] {
             flex-direction: column !important;
             gap: 16px !important;
+            width: 100%;
           }
 
           /* Hero section */

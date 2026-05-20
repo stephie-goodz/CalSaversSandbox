@@ -119,6 +119,129 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* =====================================================
+   HOVER STATES — Savers Page + Payroll Integration
+   ===================================================== */
+
+/* Base transitions */
+[data-name="IntegrationRadios"],
+[data-name="SupportCard"],
+[data-name="Card"],
+[data-name="Accordion/expanded"],
+[data-name="Accordion/collapsed"],
+[data-name="Link"] {
+  transition: background-color 0.15s ease;
+}
+
+[data-name="Button"] {
+  transition: background-color 0.15s ease;
+}
+
+[data-name="Arrow"] {
+  transition: transform 0.2s ease;
+}
+
+[data-name="IntegrationRadios"] > div[aria-hidden="true"],
+[data-name="SupportCard"] > div[aria-hidden="true"],
+[data-name="Card"] > div[aria-hidden="true"],
+[data-name="Accordion/expanded"] > div[aria-hidden="true"],
+[data-name="Accordion/collapsed"] > div[aria-hidden="true"],
+[data-name="Button"] > div[aria-hidden="true"] {
+  transition: border-color 0.15s ease, border-width 0.15s ease;
+}
+
+/* --- Radio Cards --- */
+[data-name="IntegrationRadios"]:hover {
+  background-color: #F2F6F6 !important;
+}
+
+[data-name="IntegrationRadios"]:hover > div[aria-hidden="true"] {
+  border: 2px solid #00473F !important;
+}
+
+[data-name="IntegrationRadios"]:hover [data-name="selection"] > div[aria-hidden="true"] {
+  border-color: #1A1A1A !important;
+}
+
+/* --- Cards (SupportCard, info Card) --- */
+[data-name="SupportCard"]:hover,
+[data-name="Card"]:hover {
+  background-color: #F2F6F6 !important;
+  --stroke-0: #00473F;
+}
+
+[data-name="SupportCard"]:hover > div[aria-hidden="true"],
+[data-name="Card"]:hover > div[aria-hidden="true"] {
+  border: 2px solid #00473F !important;
+}
+
+[data-name="SupportCard"]:hover [data-name="Arrow"],
+[data-name="Card"]:hover [data-name="Arrow"] {
+  transform: translateX(8px);
+}
+
+[data-name="SupportCard"]:hover [data-name="Link"] p,
+[data-name="Card"]:hover [data-name="Link"] p {
+  color: #00473F !important;
+}
+
+/* --- Primary Buttons (green fill) --- */
+[data-name="Button"][class*="bg-[#00594f]"]:hover {
+  background-color: #00473F !important;
+}
+
+[data-name="Button"][class*="bg-[#00594f]"]:hover > div[aria-hidden="true"] {
+  border: 2px solid #00473F !important;
+}
+
+/* --- Secondary Buttons (white fill, teal outline) --- */
+[data-name="Button"][class*="bg-white"]:hover {
+  background-color: #E5EEED !important;
+}
+
+[data-name="Button"][class*="bg-white"]:hover > div[aria-hidden="true"] {
+  border: 2px solid #00473F !important;
+}
+
+[data-name="Button"][class*="bg-white"]:hover p {
+  color: #00473F !important;
+}
+
+/* --- Accordions (collapsed and expanded headers) --- */
+[data-name="Accordion/expanded"]:hover > div[aria-hidden="true"],
+[data-name="Accordion/collapsed"]:hover > div[aria-hidden="true"] {
+  border: 1px solid #00473F !important;
+}
+
+[data-name="Accordion/expanded"]:hover [data-name="Text Container"] p,
+[data-name="Accordion/collapsed"]:hover [data-name="Text Container"] p {
+  color: #00473F !important;
+  text-decoration-line: underline !important;
+}
+
+[data-name="Accordion/expanded"]:hover,
+[data-name="Accordion/collapsed"]:hover {
+  --fill-0: #00473F;
+}
+
+/* --- Text Links --- */
+[data-name="Link"]:hover {
+  background-color: #F2F6F6 !important;
+}
+
+[data-name="Link"]:hover p,
+[data-name="Link"]:hover > div > p {
+  color: #00473F !important;
+}
+
+[data-name="Link"]:hover [data-name="Arrow"] {
+  transform: translateX(8px);
+}
+
+/* =====================================================
+   END HOVER STATES
+   ===================================================== */
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

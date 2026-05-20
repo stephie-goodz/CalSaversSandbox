@@ -92,10 +92,27 @@ export default function SaversPage() {
       }
     };
 
+    const handleChange = (e: Event) => {
+      const target = e.target as HTMLSelectElement;
+      if (target.getAttribute('data-name') === 'TabDropdown') {
+        const value = target.value;
+        if (value === 'signup') {
+          setActiveTab('signup');
+          setToggleOn(false);
+        } else if (value === 'optout') {
+          setActiveTab('optout');
+        }
+      }
+    };
+
     const container = containerRef.current;
     if (container) {
       container.addEventListener('click', handleClick);
-      return () => container.removeEventListener('click', handleClick);
+      container.addEventListener('change', handleChange);
+      return () => {
+        container.removeEventListener('click', handleClick);
+        container.removeEventListener('change', handleChange);
+      };
     }
   }, [activeTab]);
 
@@ -189,7 +206,29 @@ export default function SaversPage() {
           <div className="content-stretch flex flex-[1_0_0] flex-col gap-[40px] items-center justify-center w-full max-w-[66.66%] min-w-px relative" data-name="InnerContainer">
             <Header />
             <div className="w-full content-stretch flex flex-col isolate items-start relative shrink-0 z-[1]" data-name="Savers Registration Tabs Toggle">
-              <Tabs />
+              {/* Mobile dropdown — hidden on md+ */}
+              <div className="md:hidden w-full mb-4 z-[2]" data-name="Tabs">
+                <p className="font-['Poppins',sans-serif] font-medium text-[12px] text-[#6b6b6b] mb-1">Choose an option</p>
+                <select
+                  className="w-full bg-white border-2 border-[#00594f] rounded-lg px-4 py-3 font-['Poppins',sans-serif] font-semibold text-[16px] text-black tracking-[1px] appearance-none cursor-pointer"
+                  value={activeTab}
+                  onChange={() => {}}
+                  data-name="TabDropdown"
+                  style={{
+                    backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2300594f' d='M6 9L1 4h10z'/%3E%3C/svg%3E\")",
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'right 1rem center',
+                    paddingRight: '2.5rem'
+                  }}
+                >
+                  <option value="signup">Sign Up for CalSavers</option>
+                  <option value="optout">Opt-Out of CalSavers</option>
+                </select>
+              </div>
+              {/* Desktop tabs — hidden below md */}
+              <div className="hidden md:block w-full">
+                <Tabs />
+              </div>
               {getBodyContent()}
             </div>
           </div>
@@ -268,10 +307,9 @@ export default function SaversPage() {
         }
 
         [data-name="Banner"] {
-        height: 150px;
-    max-width: 100% !important;
-    padding: 0 24px;
-}
+          height: 150px;
+          max-width: 100% !important;
+          padding: 0 24px;
         }
 
         /* Smooth accordion transitions */
@@ -371,6 +409,11 @@ export default function SaversPage() {
             padding-right: 0px !important;
           }
 
+          [data-name="Hero"] [data-name="InnerContainer"]{
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+          }
+
            [data-name="Hero"] > div > img {
             object-fit: cover !important;
           }
@@ -436,15 +479,15 @@ export default function SaversPage() {
             display: none !important;
           }
 
-          /* SecondaryNav mobile layout - keep only language dropdown */
+          /* SecondaryNav mobile layout — hamburger left, language right */
           [data-name="SecondaryNav"] {
             padding: 12px 24px !important;
           }
 
           [data-name="SecondaryNav"] [data-name="InnerContainer"] {
-            justify-content: flex-end !important;
-            padding-left: 24px;
-            padding-right 24px;
+            justify-content: space-between !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
           }
           
 
@@ -463,13 +506,6 @@ export default function SaversPage() {
             font-size: 32px !important;
             line-height: 40px !important;
           }
-
-          /* Tabs - stack vertically */
-          [data-name="Tabs"] {
-            flex-direction: column !important;
-            gap: 8px !important;
-          }
-          
 
           [data-name="Hero"] [data-name="InnerContainer"] {
           flex-direction: column !important;
@@ -552,7 +588,7 @@ export default function SaversPage() {
 
           /* Support cards - stack vertically with 24px gap */
           [data-name="Cards"] {
-            flex-direction: columns !important;
+            flex-direction: column !important;
             gap: 24px !important;
           }
 

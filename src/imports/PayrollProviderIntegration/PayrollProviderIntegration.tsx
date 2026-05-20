@@ -730,9 +730,20 @@ function AssistiveText({ message }: { message: string }) {
   );
 }
 
+function SuccessText({ message }: { message: string }) {
+  if (!message) return <div className="content-stretch flex gap-[8px] h-[14px] items-center justify-center relative shrink-0 w-full" data-name="Assistive text" />;
+
+  return (
+    <div className="content-stretch flex gap-[8px] items-center justify-start relative shrink-0 w-full mt-1" data-name="Assistive text">
+      <p className="font-['Poppins',sans-serif] text-[14px] text-green-600 leading-[18px]">{message}</p>
+    </div>
+  );
+}
+
 function Form() {
   const [searchQuery, setSearchQuery] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
   const [showDropdown, setShowDropdown] = useState(false);
 
   const filteredProviders = searchQuery.trim()
@@ -744,6 +755,7 @@ function Form() {
   const handleSearchChange = (value: string) => {
     setSearchQuery(value);
     setShowDropdown(value.trim().length > 0);
+    setSuccessMessage('');
 
     if (!value.trim()) {
       setErrorMessage('');
@@ -766,6 +778,7 @@ function Form() {
     setSearchQuery(provider);
     setShowDropdown(false);
     setErrorMessage('');
+    setSuccessMessage('Good news! Your selected payroll provider is offered through Payroll Integrations Inc.');
   };
 
   return (
@@ -783,7 +796,7 @@ function Form() {
           onSelect={handleSelectProvider}
           showDropdown={showDropdown}
         />
-        <AssistiveText message={errorMessage} />
+        {successMessage ? <SuccessText message={successMessage} /> : <AssistiveText message={errorMessage} />}
       </div>
     </div>
   );

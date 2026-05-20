@@ -172,7 +172,7 @@
 
 [data-name="SupportCard"]:hover > div[aria-hidden="true"],
 [data-name="Card"]:hover > div[aria-hidden="true"] {
-  border: 2px solid #00473F !important;
+  border: 1px solid #00473F !important;
 }
 
 [data-name="SupportCard"]:hover [data-name="Arrow"],
@@ -191,7 +191,7 @@
 }
 
 [data-name="Button"][class*="bg-[#00594f]"]:hover > div[aria-hidden="true"] {
-  border: 2px solid #00473F !important;
+  border: 1px solid #00473F !important;
 }
 
 /* --- Secondary Buttons (white fill, teal outline) --- */
@@ -200,7 +200,7 @@
 }
 
 [data-name="Button"][class*="bg-white"]:hover > div[aria-hidden="true"] {
-  border: 2px solid #00473F !important;
+  border: 1px solid #00473F !important;
 }
 
 [data-name="Button"][class*="bg-white"]:hover p {

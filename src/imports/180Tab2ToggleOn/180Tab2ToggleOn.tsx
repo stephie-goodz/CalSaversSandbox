@@ -27,9 +27,9 @@ export function Tab180SetupToggleOnBodyContent() {
 
       {/* Steps Container */}
       <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-name="StepsContainer">
-      <div className="content-stretch flex gap-[24px] items-start relative shrink-0 w-full" data-name="Row">
+      <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Row">
         {/* Step 1 */}
-        <div className="bg-white flex-[1_0_0] min-w-px relative rounded-[8px] self-stretch" data-name="Step 1">
+        <div className="bg-white w-full min-w-px relative rounded-[8px]" data-name="Step 1">
           <div className="overflow-clip rounded-[inherit] size-full">
             <div className="content-stretch flex gap-[12px] items-start p-[24px] relative size-full">
               <div className="bg-[#80641f] content-stretch flex flex-col items-center justify-center p-[8px] relative rounded-[32px] shrink-0 size-[32px]" data-name="Number Container">
@@ -49,11 +49,11 @@ export function Tab180SetupToggleOnBodyContent() {
               </div>
             </div>
           </div>
-          <div aria-hidden="true" className="absolute border border-[#d3d3d3] border-solid inset-0 pointer-events-none rounded-[8px]" />
+          <div aria-hidden="true" className="hidden" />
         </div>
 
         {/* Step 2 */}
-        <div className="bg-white flex-[1_0_0] min-w-px relative rounded-[8px] self-stretch" data-name="Step 2">
+        <div className="bg-white w-full min-w-px relative rounded-[8px]" data-name="Step 2">
           <div className="overflow-clip rounded-[inherit] size-full">
             <div className="content-stretch flex gap-[12px] items-start p-[24px] relative size-full">
               <div className="bg-[#80641f] content-stretch flex flex-col items-center justify-center p-[8px] relative rounded-[32px] shrink-0 size-[32px]" data-name="Number Container">
@@ -71,13 +71,13 @@ export function Tab180SetupToggleOnBodyContent() {
               </div>
             </div>
           </div>
-          <div aria-hidden="true" className="absolute border border-[#d3d3d3] border-solid inset-0 pointer-events-none rounded-[8px]" />
+          <div aria-hidden="true" className="hidden" />
         </div>
       </div>
 
-      <div className="content-stretch flex gap-[24px] items-start relative shrink-0 w-full" data-name="Row">
+      <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Row">
         {/* Step 3 */}
-        <div className="bg-white flex-[1_0_0] min-w-px relative rounded-[8px] self-stretch" data-name="Step 3">
+        <div className="bg-white w-full min-w-px relative rounded-[8px]" data-name="Step 3">
           <div className="overflow-clip rounded-[inherit] size-full">
             <div className="content-stretch flex gap-[12px] items-start p-[24px] relative size-full">
               <div className="bg-[#80641f] content-stretch flex flex-col items-center justify-center p-[8px] relative rounded-[32px] shrink-0 size-[32px]" data-name="Number Container">
@@ -89,11 +89,11 @@ export function Tab180SetupToggleOnBodyContent() {
               </div>
             </div>
           </div>
-          <div aria-hidden="true" className="absolute border border-[#d3d3d3] border-solid inset-0 pointer-events-none rounded-[8px]" />
+          <div aria-hidden="true" className="hidden" />
         </div>
 
         {/* Step 4 */}
-        <div className="bg-white flex-[1_0_0] min-w-px relative rounded-[8px] self-stretch" data-name="Step 4">
+        <div className="bg-white w-full min-w-px relative rounded-[8px]" data-name="Step 4">
           <div className="overflow-clip rounded-[inherit] size-full">
             <div className="content-stretch flex gap-[12px] items-start p-[24px] relative size-full">
               <div className="bg-[#80641f] content-stretch flex flex-col items-center justify-center p-[8px] relative rounded-[32px] shrink-0 size-[32px]" data-name="Number Container">
@@ -105,7 +105,7 @@ export function Tab180SetupToggleOnBodyContent() {
               </div>
             </div>
           </div>
-          <div aria-hidden="true" className="absolute border border-[#d3d3d3] border-solid inset-0 pointer-events-none rounded-[8px]" />
+          <div aria-hidden="true" className="hidden" />
         </div>
       </div>
       </div>

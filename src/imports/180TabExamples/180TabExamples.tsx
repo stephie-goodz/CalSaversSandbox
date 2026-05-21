@@ -292,7 +292,7 @@ function InnerContainer1() {
 function Frame2() {
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full">
-      <p className="font-['Poppins',sans-serif] font-medium leading-[32px] not-italic relative shrink-0 text-[20px] text-black tracking-[1px] w-full">Payroll File Upload (180° integration) Overview</p>
+      <p className="font-['Poppins',sans-serif] font-medium leading-[32px] not-italic relative shrink-0 text-[20px] text-black tracking-[1px] w-full">Payroll File Upload Overview</p>
       <InnerContainer1 />
     </div>
   );

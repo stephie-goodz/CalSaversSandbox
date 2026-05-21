@@ -1176,7 +1176,7 @@ function Frame11() {
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-start not-italic relative shrink-0 tracking-[1px] w-full">
       <p className="font-['Poppins',sans-serif] font-medium leading-[32px] relative shrink-0 text-[20px] text-black w-full">
-        Automated Payroll Sync (360° Integration) Overview
+        Automated Payroll Sync Overview
       </p>
       <p className="font-['Poppins',sans-serif] leading-[24px] relative shrink-0 text-[#6b6b6b] text-[16px] w-full whitespace-pre-wrap">
         CalSavers offers seamless 360° integration by retrieving

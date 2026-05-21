@@ -1200,9 +1200,7 @@ function TextContainer() {
       className="content-stretch flex flex-[1_0_0] flex-col font-['Poppins',sans-serif] font-semibold gap-[4px] items-start min-w-0 not-italic relative"
       data-name="Text Container"
     >
-      <p className="leading-[21px] relative shrink-0 text-[#80641f] text-[14px] tracking-[1.5px] uppercase whitespace-nowrap">
-        3rd Party IntegratioN
-      </p>
+      
       <p className="leading-[24px] min-w-full relative shrink-0 text-[#00594f] text-[16px] tracking-[1px] w-full min-w-0">
         Learn more about Payroll Integrations Inc.
       </p>
@@ -1960,9 +1958,6 @@ function TextContainer1() {
       className="content-stretch flex flex-[1_0_0] flex-col font-['Poppins',sans-serif] font-semibold gap-[4px] items-start min-w-0 not-italic relative"
       data-name="Text Container"
     >
-      <p className="leading-[21px] relative shrink-0 text-[#80641f] text-[14px] tracking-[1.5px] uppercase whitespace-nowrap">
-        CalSavers Integration
-      </p>
       <p className="leading-[24px] min-w-full relative shrink-0 text-[#00594f] text-[16px] tracking-[1px] w-full min-w-0">
         Learn more about Paychex and TJH Payroll integration
       </p>

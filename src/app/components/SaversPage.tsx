@@ -335,6 +335,17 @@ export default function SaversPage() {
           overflow-wrap: break-word !important;
         }
 
+        /* Quickview step boxes — always single column, no border */
+        [data-name="StepsContainer"] [data-name="Row"] {
+          flex-direction: column !important;
+          gap: 16px !important;
+          height: auto !important;
+        }
+
+        [data-name="StepsContainer"] [data-name^="Step "] > div[aria-hidden="true"] {
+          display: none !important;
+        }
+
         /* TABLET BREAKPOINT (768px - 1024px) */
         @media (max-width: 1024px) {
           /* Full width with padding on tablet */

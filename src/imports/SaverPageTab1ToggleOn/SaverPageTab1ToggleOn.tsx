@@ -86,14 +86,14 @@ function Container4() {
 
 function Step() {
   return (
-    <div className="bg-white flex-[1_0_0] min-w-px relative rounded-[8px] self-stretch" data-name="Step 1">
+    <div className="bg-white w-full min-w-px relative rounded-[8px]" data-name="Step 1">
       <div className="overflow-clip rounded-[inherit] size-full">
         <div className="content-stretch flex gap-[12px] items-start p-[24px] relative size-full">
           <NumberContainer />
           <Container4 />
         </div>
       </div>
-      <div aria-hidden="true" className="absolute border border-[#d3d3d3] border-solid inset-0 pointer-events-none rounded-[8px]" />
+      <div aria-hidden="true" className="hidden" />
     </div>
   );
 }
@@ -117,21 +117,21 @@ function TextContainer1() {
 
 function Step1() {
   return (
-    <div className="bg-white flex-[1_0_0] min-w-px relative rounded-[8px] self-stretch" data-name="Step 2">
+    <div className="bg-white w-full min-w-px relative rounded-[8px]" data-name="Step 2">
       <div className="overflow-clip rounded-[inherit] size-full">
         <div className="content-stretch flex gap-[12px] items-start p-[24px] relative size-full">
           <NumberContainer1 />
           <TextContainer1 />
         </div>
       </div>
-      <div aria-hidden="true" className="absolute border border-[#d3d3d3] border-solid inset-0 pointer-events-none rounded-[8px]" />
+      <div aria-hidden="true" className="hidden" />
     </div>
   );
 }
 
 function Row() {
   return (
-    <div className="content-stretch flex gap-[24px] items-start relative shrink-0 w-full" data-name="Row">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Row">
       <Step />
       <Step1 />
     </div>
@@ -157,14 +157,14 @@ function TextContainer2() {
 
 function Step2() {
   return (
-    <div className="bg-white flex-[1_0_0] min-w-px relative rounded-[8px]" data-name="Step 3">
+    <div className="bg-white w-full min-w-px relative rounded-[8px]" data-name="Step 3">
       <div className="overflow-clip rounded-[inherit] size-full">
         <div className="content-stretch flex gap-[12px] items-start p-[24px] relative size-full">
           <NumberContainer2 />
           <TextContainer2 />
         </div>
       </div>
-      <div aria-hidden="true" className="absolute border border-[#d3d3d3] border-solid inset-0 pointer-events-none rounded-[8px]" />
+      <div aria-hidden="true" className="hidden" />
     </div>
   );
 }
@@ -188,21 +188,21 @@ function TextContainer3() {
 
 function Step3() {
   return (
-    <div className="bg-white flex-[1_0_0] min-w-px relative rounded-[8px] self-stretch" data-name="Step 4">
+    <div className="bg-white w-full min-w-px relative rounded-[8px]" data-name="Step 4">
       <div className="overflow-clip rounded-[inherit] size-full">
         <div className="content-stretch flex gap-[12px] items-start p-[24px] relative size-full">
           <NumberContainer3 />
           <TextContainer3 />
         </div>
       </div>
-      <div aria-hidden="true" className="absolute border border-[#d3d3d3] border-solid inset-0 pointer-events-none rounded-[8px]" />
+      <div aria-hidden="true" className="hidden" />
     </div>
   );
 }
 
 function Row1() {
   return (
-    <div className="content-stretch flex gap-[24px] items-start relative shrink-0 w-full" data-name="Row">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Row">
       <Step2 />
       <Step3 />
     </div>

@@ -307,6 +307,34 @@ export default function App() {
           margin-right: auto !important;
         }
 
+        /* Tablet tabs - auto-layout, hug content, wrap */
+          [data-name="Tabs"].hidden.md\\:flex {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            width: 100% !important;
+            gap: 12px !important;
+          }
+
+          [data-name="Tabs"].hidden.md\\:flex [data-name="TabSetup"] {
+            flex: 0 1 auto !important;
+            width: auto !important;
+            min-width: inherit !important;
+            white-space: normal !important;
+          }
+
+        [data-name="Tab Text"] {
+        white-space: break-spaces;
+        width: 100%;
+        flex: inherit;
+        padding: 8px 0;
+        }
+
+        [data-name="Text + Icon"] {
+        min-height: auto;
+        width: 100%;
+        padding-inline: 0px;
+        }
+
         /* Tab containers */
         [data-name*="360-Tabs"],
         [data-name*="Tab 2"],
@@ -369,9 +397,15 @@ export default function App() {
           transition: transform 0.3s ease;
         }
 
-                /* StepText - quickview boxes */
+                /* StepText - quickview boxes â always single column */
           [data-name="StepsContainer"] [data-name="Row"]{
+            flex-direction: column !important;
+            gap: 16px !important;
             height: auto !important;
+          }
+
+          [data-name="StepsContainer"] [data-name^="Step "] > div[aria-hidden="true"] {
+            display: none !important;
           }
 
         /* Inactive tab hover effects */

@@ -200,6 +200,12 @@ export default function SaversPage() {
       if (tabText) {
         tabText.style.color = isActive ? '#000000' : '#00594f';
       }
+
+      // Active tab: remove bottom border to connect tab to content panel
+      const borderEl = el.querySelector('[aria-hidden="true"]') as HTMLElement | null;
+      if (borderEl) {
+        borderEl.style.borderBottom = isActive ? 'none' : '';
+      }
     });
   }, [activeTab]);
 

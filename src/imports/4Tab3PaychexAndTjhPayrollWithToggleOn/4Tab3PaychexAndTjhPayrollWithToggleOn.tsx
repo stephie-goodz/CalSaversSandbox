@@ -456,8 +456,8 @@ function NumberContainer() {
 function TextContainer() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start leading-[24px] not-italic relative shrink-0 text-[16px] tracking-[1px] w-full" data-name="Text Container">
-      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Log in to your account and go to “Payroll Provider” to begin adding your provider</p>
-      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full whitespace-pre-wrap">{`Go to payroll provider and select “Add New” and select Paychex or TJH to start the  integration.`}</p>
+      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Go to “Payroll Provider” to begin adding your provider</p>
+      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full whitespace-pre-wrap">{`Select “Add New” and select Paychex or TJH to start the  integration.`}</p>
     </div>
   );
 }
@@ -466,12 +466,6 @@ function Container4() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-w-px relative" data-name="Container">
       <TextContainer />
-      <a className="bg-[#00594f] content-stretch cursor-pointer flex gap-[8px] items-center justify-center px-[16px] py-[8px] relative rounded-[4px] shrink-0" href="https://employer.calsavers.com/californiaertpl/enroll/createEmp/viewCollectEmpPreRegDetails.cs?request_locale=en_US" target="_blank" data-name="Button">
-        <div aria-hidden="true" className="absolute border border-[#00473f] border-solid inset-[-0.5px] pointer-events-none rounded-[4.5px]" />
-        <div className="flex flex-col font-['Poppins',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-center text-white tracking-[1px] whitespace-nowrap">
-          <p className="leading-[24px]">Account Login</p>
-        </div>
-      </a>
     </div>
   );
 }
@@ -541,8 +535,8 @@ function NumberContainer2() {
 function TextContainer2() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start leading-[24px] min-w-px not-italic relative text-[16px] tracking-[1px]" data-name="Text Container">
-      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Add a bank or select a previously added account</p>
-      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">Select a bank account that your company will use to send employee contributions.</p>
+      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Log in and add a bank account for employee contributions</p>
+      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">Once Logged in, go to "Banking Information" and add a bank account that your company will use to send employee contributions.</p>
     </div>
   );
 }
@@ -553,7 +547,15 @@ function Step2() {
       <div className="overflow-clip rounded-[inherit] size-full">
         <div className="content-stretch flex gap-[12px] items-start p-[24px] relative size-full">
           <NumberContainer2 />
-          <TextContainer2 />
+          <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-w-px relative" data-name="Container">
+      <TextContainer2 />
+      <a className="bg-[#00594f] content-stretch cursor-pointer flex gap-[8px] items-center justify-center px-[16px] py-[8px] relative rounded-[4px] shrink-0" href="https://employer.calsavers.com/californiaertpl/enroll/createEmp/viewCollectEmpPreRegDetails.cs?request_locale=en_US" target="_blank" data-name="Button">
+        <div aria-hidden="true" className="absolute border border-[#00473f] border-solid inset-[-0.5px] pointer-events-none rounded-[4.5px]" />
+        <div className="flex flex-col font-['Poppins',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-center text-white tracking-[1px] whitespace-nowrap">
+          <p className="leading-[24px]">Account Login</p>
+        </div>
+      </a>
+    </div>
         </div>
       </div>
       <div aria-hidden="true" className="hidden" />

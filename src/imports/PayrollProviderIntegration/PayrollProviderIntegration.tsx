@@ -2007,7 +2007,7 @@ function Text4() {
       </p>
       <p className="font-['Poppins',sans-serif] leading-[0] relative shrink-0 text-[#6b6b6b] w-full whitespace-pre-wrap">
         <span className="leading-[24px]">
-          Paychex and TJH Payroll offer their own direct 360° integrations with CalSavers, allowing employee contribution information to be securely transmitted automatically between your payroll provider and CalSavers.<br /><br />Pricing and setup support for these services are managed directly by the payroll provider. For pricing details or assistance with setup, please contact your provider directly.
+          Paychex and TJH Payroll offer their own direct 360° integrations with CalSavers, allowing employee contribution information to be securely transmitted automatically between your payroll provider and CalSavers.<br /><br />Pricing and setup support for these services are managed directly by the payroll provider. For pricing details, please contact your provider directly.
           <br aria-hidden="true" />
           <br aria-hidden="true" />
         </span>

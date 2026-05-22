@@ -58,7 +58,7 @@ export default function SaversPage() {
         return;
       }
 
-      if (textContent.includes('Toggle Quick Overview')) {
+      if (textContent.includes('Toggle Detailed')) {
         setToggleOn(prev => !prev);
         return;
       }
@@ -174,15 +174,46 @@ export default function SaversPage() {
     });
   }, [expandedAccordions, activeTab, toggleOn]);
 
+  // Apply active/inactive styles to desktop tabs
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const tabSetups = container.querySelectorAll('[data-name="TabSetup"]');
+    tabSetups.forEach((tab: Element, index: number) => {
+      const el = tab as HTMLElement;
+      const isActive =
+        (index === 0 && activeTab === 'signup') ||
+        (index === 1 && activeTab === 'optout');
+
+      el.style.backgroundColor = isActive ? 'white' : '#F2F0E9';
+      el.style.justifyContent = isActive ? 'flex-end' : 'center';
+
+      // Show/hide the white bottom spacer that covers the tab's bottom border
+      const outerSpacer = el.querySelector('[data-name="Spacer"]') as HTMLElement | null;
+      if (outerSpacer) {
+        outerSpacer.style.opacity = isActive ? '1' : '0';
+      }
+
+      // Opt-Out tab: toggle text color between active (black) and inactive (green)
+      if (index === 1) {
+        const tabText = el.querySelector('[data-name="Tab Text"] p') as HTMLElement | null;
+        if (tabText) {
+          tabText.style.color = isActive ? '#000000' : '#00594f';
+        }
+      }
+    });
+  }, [activeTab]);
+
   // Determine which body content to show based on state
   const getBodyContent = () => {
     if (activeTab === 'optout') {
       return <OptOutBody />;
     }
     if (toggleOn) {
-      return <SignUpToggleOnBody />;
+      return <SignUpToggleOffBody />;
     }
-    return <SignUpToggleOffBody />;
+    return <SignUpToggleOnBody />;
   };
 
   return (
@@ -234,7 +265,7 @@ export default function SaversPage() {
               </div>
               {/* Desktop tabs — hidden below md */}
               <div className="hidden md:block w-full">
-                <Tabs />
+                <Tabs activeTab={activeTab} />
               </div>
               {getBodyContent()}
             </div>
@@ -333,6 +364,29 @@ export default function SaversPage() {
         p, span, div {
           word-wrap: break-word !important;
           overflow-wrap: break-word !important;
+        }
+
+        /* StepText — 50/50 two-column layout on tablet and desktop */
+        @media (min-width: 768px) {
+          [data-name="StepText"] {
+            flex-direction: row !important;
+            align-items: flex-start !important;
+          }
+          [data-name="StepText"] > p:first-child {
+            flex: 1 1 0% !important;
+            min-width: 0 !important;
+          }
+          [data-name="StepText"] > div:last-child {
+            flex: 1 1 0% !important;
+            min-width: 0 !important;
+          }
+          [data-name="StepText"] > div > p {
+            text-align: right !important;
+            width: 100% !important;
+          }
+          [data-name="Toggle Switch"] {
+            justify-content: flex-end !important;
+          }
         }
 
         /* Quickview step boxes — always single column, no border */

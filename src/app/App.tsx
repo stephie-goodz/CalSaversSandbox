@@ -55,8 +55,10 @@ export default function App() {
             setActiveTab(1);
           } else if (tabText.includes("Payroll Integrations Inc")) {
             setActiveTab(2);
+            setTab2Toggle(false);
           } else if (tabText.includes("Paychex") || tabText.includes("TJH")) {
             setActiveTab(3);
+            setTab3Toggle(false);
           }
         } else {
           // 180° tabs
@@ -64,6 +66,7 @@ export default function App() {
             setActive180Tab(1);
           } else if (tabText.includes("How to integrate")) {
             setActive180Tab(2);
+            setToggle180(false);
           }
         }
         return;
@@ -141,8 +144,11 @@ export default function App() {
         const selectedValue = parseInt(target.value);
         if (integrationMode === '360') {
           setActiveTab(selectedValue as 1 | 2 | 3);
+          if (selectedValue === 2) setTab2Toggle(false);
+          if (selectedValue === 3) setTab3Toggle(false);
         } else {
           setActive180Tab(selectedValue as 1 | 2);
+          if (selectedValue === 2) setToggle180(false);
         }
       }
     };
@@ -224,16 +230,16 @@ export default function App() {
     if (activeTab === 1) {
       BodyContent = <Tab1BodyContent />;
     } else if (activeTab === 2) {
-      BodyContent = tab2Toggle ? <Tab2ToggleOnBodyContent /> : <Tab2ToggleOffBodyContent />;
+      BodyContent = tab2Toggle ? <Tab2ToggleOffBodyContent /> : <Tab2ToggleOnBodyContent />;
     } else {
-      BodyContent = tab3Toggle ? <Tab3ToggleOnBodyContent /> : <Tab3ToggleOffBodyContent />;
+      BodyContent = tab3Toggle ? <Tab3ToggleOffBodyContent /> : <Tab3ToggleOnBodyContent />;
     }
   } else {
     // 180° integration mode
     if (active180Tab === 1) {
       BodyContent = <Tab180OverviewContent />;
     } else {
-      BodyContent = toggle180 ? <Tab180SetupToggleOnBodyContent /> : <Tab180SetupToggleOffBodyContent />;
+      BodyContent = toggle180 ? <Tab180SetupToggleOffBodyContent /> : <Tab180SetupToggleOnBodyContent />;
     }
   }
 
@@ -395,6 +401,29 @@ export default function App() {
         [data-name="chevron-up"],
         [data-name="chevron-down"] {
           transition: transform 0.3s ease;
+        }
+
+        /* StepText — 50/50 two-column layout on tablet and desktop */
+        @media (min-width: 768px) {
+          [data-name="StepText"] {
+            flex-direction: row !important;
+            align-items: flex-start !important;
+          }
+          [data-name="StepText"] > p:first-child {
+            flex: 1 1 0% !important;
+            min-width: 0 !important;
+          }
+          [data-name="StepText"] > div:last-child {
+            flex: 1 1 0% !important;
+            min-width: 0 !important;
+          }
+          [data-name="StepText"] > div > p {
+            text-align: right !important;
+            width: 100% !important;
+          }
+          [data-name="Toggle Switch"] {
+            justify-content: flex-end !important;
+          }
         }
 
                 /* StepText - quickview boxes â always single column */
@@ -709,9 +738,9 @@ export default function App() {
           padding: 0px 24px;
           }
 
-         
-          
-
+         [data-name="QuickViewToggle"] [data-name="Toggle Switch"] > p {
+        flex: auto !important;
+          }
 
           [data-name="StepText"] > p {
             width: 100% !important;

@@ -2011,7 +2011,6 @@ function Text4() {
           <br aria-hidden="true" />
           <br aria-hidden="true" />
         </span>
-        <span className="leading-[24px] text-black">{`It's important to note that their pricing is based on their specific service fees, which are distinct from CalSavers' costs. For in-depth pricing details and setup support, we recommend contacting them directly.`}</span>
       </p>
     </div>
   );

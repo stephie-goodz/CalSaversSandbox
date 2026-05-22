@@ -460,7 +460,7 @@ function NumberContainer1() {
 function TextContainer1() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-px relative" data-name="Text Container">
-      <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] min-w-full not-italic relative shrink-0 text-[#00594f] text-[16px] tracking-[1px] w-[min-content]">Log into the CalSavers employer dashboard to start the integration set up</p>
+      <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] min-w-full not-italic relative shrink-0 text-[#00594f] text-[16px] tracking-[1px] w-[min-content]">Start the integration set up</p>
     </div>
   );
 }
@@ -491,8 +491,8 @@ function Text3() {
     <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-name="Text">
       <div className="font-['Poppins',sans-serif] leading-[0] not-italic relative shrink-0 text-[#6b6b6b] text-[0px] tracking-[1px] w-full whitespace-pre-wrap">
         <p className="mb-0 text-[16px]">
-          <span className="[text-decoration-skip-ink:none] decoration-solid font-['Poppins',sans-serif] font-semibold leading-[24px] not-italic text-[#00594f] tracking-[1px] underline">Log in</span>
-          <span className="leading-[24px]">{` to the employer portal and select “Payroll Provider” on the left-hand side of the screen under Dashboard.`}</span>
+          
+          <span className="leading-[24px]">{`Go to the employer portal and select “Payroll Provider” on the left-hand side of the screen under Dashboard.`}</span>
         </p>
         <p className="leading-[24px] mb-0 text-[16px]">​</p>
         <p className="leading-[24px] mb-0 text-[16px]">Select “Add New” to start the payroll integration process.</p>
@@ -565,7 +565,7 @@ function NumberContainer2() {
 function TextContainer2() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-px relative" data-name="Text Container">
-      <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] min-w-full not-italic relative shrink-0 text-[#00594f] text-[16px] tracking-[1px] w-[min-content]">Set up banking for future employee contributions</p>
+      <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] min-w-full not-italic relative shrink-0 text-[#00594f] text-[16px] tracking-[1px] w-[min-content]">Log in and set up banking for future employee contributions</p>
     </div>
   );
 }
@@ -595,7 +595,7 @@ function Text4() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-name="Text">
       <div className="font-['Poppins',sans-serif] leading-[0] not-italic relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full whitespace-pre-wrap">
-        <p className="leading-[24px] mb-0">Add or use a previously added bank account that your company will use to send employee contributions.</p>
+        <p className="leading-[24px] mb-0"><span className="[text-decoration-skip-ink:none] decoration-solid font-['Poppins',sans-serif] font-semibold leading-[24px] not-italic text-[#00594f] tracking-[1px] underline">Log in</span> and go to "Banking Information" and add a bank account that your company will use to send employee contributions.</p>
         <p className="leading-[24px] mb-0">​</p>
         <p className="leading-[24px]">{`If your bank account isn’t added, select “Add a bank account” to enter your routing and account numbers. You will have to option to provide a customized account nickname if you have multiple bank accounts. `}</p>
       </div>

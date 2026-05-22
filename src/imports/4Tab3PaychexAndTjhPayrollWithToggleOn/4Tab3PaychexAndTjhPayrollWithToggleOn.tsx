@@ -448,7 +448,7 @@ function StepText() {
 function NumberContainer() {
   return (
     <div className="bg-[#80641f] content-stretch flex flex-col items-center justify-center p-[8px] relative rounded-[32px] shrink-0 size-[32px]" data-name="Number Container">
-      <p className="font-['Poppins',sans-serif] font-medium leading-[21px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[1px] w-full">1</p>
+      <p className="font-['Poppins',sans-serif] font-medium leading-[21px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[1px] w-full">2</p>
     </div>
   );
 }
@@ -493,7 +493,7 @@ function Step() {
 function NumberContainer1() {
   return (
     <div className="bg-[#80641f] content-stretch flex flex-col items-center justify-center p-[8px] relative rounded-[32px] shrink-0 size-[32px]" data-name="Number Container">
-      <p className="font-['Poppins',sans-serif] font-medium leading-[21px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[1px] w-full">2</p>
+      <p className="font-['Poppins',sans-serif] font-medium leading-[21px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[1px] w-full">3</p>
     </div>
   );
 }
@@ -501,8 +501,8 @@ function NumberContainer1() {
 function TextContainer1() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start leading-[24px] min-w-px not-italic relative text-[16px] tracking-[1px]" data-name="Text Container">
-      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Add company authorizer’s information</p>
-      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">You’ll need to provide the full name of the authorized contact and the email address used for payroll authorization and confirmations.</p>
+      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Complete setup</p>
+      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full whitespace-pre-wrap">{"Finish your connection by logging into your payroll provider account and follow on-screen instructions.\n\nOnce setup is complete, log into your CalSavers dashboard to verify the connection status. You should see a \"Connected\" badge."}</p>
     </div>
   );
 }
@@ -524,8 +524,8 @@ function Step1() {
 function Row() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Row">
+      <Step2 />
       <Step />
-      <Step1 />
     </div>
   );
 }
@@ -533,7 +533,7 @@ function Row() {
 function NumberContainer2() {
   return (
     <div className="bg-[#80641f] content-stretch flex flex-col items-center justify-center p-[8px] relative rounded-[32px] shrink-0 size-[32px]" data-name="Number Container">
-      <p className="font-['Poppins',sans-serif] font-medium leading-[21px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[1px] w-full">3</p>
+      <p className="font-['Poppins',sans-serif] font-medium leading-[21px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[1px] w-full">1</p>
     </div>
   );
 }
@@ -561,42 +561,10 @@ function Step2() {
   );
 }
 
-function NumberContainer3() {
-  return (
-    <div className="bg-[#80641f] content-stretch flex flex-col items-center justify-center p-[8px] relative rounded-[32px] shrink-0 size-[32px]" data-name="Number Container">
-      <p className="font-['Poppins',sans-serif] font-medium leading-[21px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[1px] w-full">4</p>
-    </div>
-  );
-}
-
-function TextContainer3() {
-  return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start leading-[24px] min-w-px not-italic relative text-[16px] tracking-[1px]" data-name="Text Container">
-      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Verify connection in your CalSavers dashboard</p>
-      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">{`Once setup is complete, log into your CalSavers dashboard to verify the connection status. You should see a "Connected" badge.`}</p>
-    </div>
-  );
-}
-
-function Step3() {
-  return (
-    <div className="bg-white w-full min-w-px relative rounded-[8px]" data-name="Step 4">
-      <div className="overflow-clip rounded-[inherit] size-full">
-        <div className="content-stretch flex gap-[12px] items-start p-[24px] relative size-full">
-          <NumberContainer3 />
-          <TextContainer3 />
-        </div>
-      </div>
-      <div aria-hidden="true" className="hidden" />
-    </div>
-  );
-}
-
 function Row1() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Row">
-      <Step2 />
-      <Step3 />
+      <Step1 />
     </div>
   );
 }

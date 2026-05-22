@@ -186,6 +186,7 @@ export default function SaversPage() {
         (index === 0 && activeTab === 'signup') ||
         (index === 1 && activeTab === 'optout');
 
+      el.setAttribute('data-active', isActive ? 'true' : 'false');
       el.style.backgroundColor = isActive ? 'white' : '#F2F0E9';
       el.style.justifyContent = isActive ? 'flex-end' : 'center';
 
@@ -341,6 +342,12 @@ export default function SaversPage() {
         [data-name="Accordion/collapsed"],
         button {
           cursor: pointer;
+        }
+
+        /* Inactive tab hover: darker green + underline */
+        [data-name="TabSetup"][data-active="false"]:hover [data-name="Tab Text"] p {
+          color: #00473f !important;
+          text-decoration: underline !important;
         }
 
         /* Smooth transitions */

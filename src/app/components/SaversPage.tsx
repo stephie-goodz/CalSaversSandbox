@@ -195,12 +195,10 @@ export default function SaversPage() {
         outerSpacer.style.opacity = isActive ? '1' : '0';
       }
 
-      // Opt-Out tab: toggle text color between active (black) and inactive (green)
-      if (index === 1) {
-        const tabText = el.querySelector('[data-name="Tab Text"] p') as HTMLElement | null;
-        if (tabText) {
-          tabText.style.color = isActive ? '#000000' : '#00594f';
-        }
+      // Both tabs: black text when active, green when inactive
+      const tabText = el.querySelector('[data-name="Tab Text"] p') as HTMLElement | null;
+      if (tabText) {
+        tabText.style.color = isActive ? '#000000' : '#00594f';
       }
     });
   }, [activeTab]);

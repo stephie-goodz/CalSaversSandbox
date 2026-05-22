@@ -929,15 +929,15 @@ function Header() {
   );
 }
 
-function TabText() {
+function TabText({ isActive = true }: { isActive?: boolean }) {
   return (
     <div className="content-stretch flex flex-col h-full items-start justify-center relative shrink-0" data-name="Tab Text">
-      <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] not-italic relative shrink-0 text-[16px] text-black tracking-[1px] whitespace-nowrap">Sign Up for CalSavers</p>
+      <p className={`font-['Poppins',sans-serif] font-semibold leading-[24px] not-italic relative shrink-0 text-[16px] ${isActive ? "text-black" : "text-[#00594f]"} tracking-[1px] whitespace-nowrap`}>Sign Up for CalSavers</p>
     </div>
   );
 }
 
-function TextIcon() {
+function TextIcon({ isActive = true }: { isActive?: boolean }) {
   return (
     <div className="content-stretch flex flex-[1_0_0] gap-[8px] items-center min-h-px px-[16px] relative" data-name="Text + Icon">
       <div className="overflow-clip relative shrink-0 size-[32px]" data-name="Type=Signup">
@@ -970,7 +970,7 @@ function TextIcon() {
           </div>
         </div>
       </div>
-      <TabText />
+      <TabText isActive={isActive} />
     </div>
   );
 }
@@ -1020,8 +1020,8 @@ function Tabs({ activeTab = 'signup' }: { activeTab?: 'signup' | 'optout' }) {
   return (
     <div className="content-stretch flex gap-[16px] items-start mb-[-1px] relative shrink-0 w-[996px] z-[2]" data-name="Tabs">
       <div className={`${signUpActive ? 'bg-white justify-end' : 'bg-[#f2f0e9] justify-center'} content-stretch flex flex-col h-[72px] items-start relative rounded-tl-[8px] rounded-tr-[8px] shrink-0`} data-name="TabSetup">
-        <div aria-hidden="true" className="absolute border-[rgba(0,89,79,0.5)] border-l border-r border-solid border-t inset-0 pointer-events-none rounded-tl-[8px] rounded-tr-[8px]" />
-        <TextIcon />
+        <div aria-hidden="true" className={`absolute border border-[rgba(0,89,79,0.5)] border-solid inset-0 pointer-events-none rounded-tl-[8px] rounded-tr-[8px]${signUpActive ? ' border-b-0' : ''}`} />
+        <TextIcon isActive={signUpActive} />
         <div className={`h-px relative shrink-0 w-full${!signUpActive ? ' opacity-0' : ''}`} data-name="Spacer">
           <div className="flex flex-col items-center size-full">
             <div className="content-stretch flex flex-col items-center px-px relative size-full">
@@ -1031,7 +1031,7 @@ function Tabs({ activeTab = 'signup' }: { activeTab?: 'signup' | 'optout' }) {
         </div>
       </div>
       <button className={`${optOutActive ? 'bg-white justify-end' : 'bg-[#f2f0e9] justify-center'} content-stretch cursor-pointer flex flex-col h-[72px] items-start max-w-[340px] relative rounded-tl-[8px] rounded-tr-[8px] shrink-0`} data-name="TabSetup">
-        <div aria-hidden="true" className="absolute border border-[rgba(0,89,79,0.5)] border-solid inset-0 pointer-events-none rounded-tl-[8px] rounded-tr-[8px]" />
+        <div aria-hidden="true" className={`absolute border border-[rgba(0,89,79,0.5)] border-solid inset-0 pointer-events-none rounded-tl-[8px] rounded-tr-[8px]${optOutActive ? ' border-b-0' : ''}`} />
         <TextIcon1 isActive={optOutActive} />
         <div className={`h-px relative shrink-0 w-full${!optOutActive ? ' opacity-0' : ''}`} data-name="Spacer">
           <div className="flex flex-col items-center size-full">

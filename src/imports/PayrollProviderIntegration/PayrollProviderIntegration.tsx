@@ -393,10 +393,10 @@ function Group() {
   );
 }
 
-function Container1() {
+function Container1({ isActive = false }: { isActive?: boolean }) {
   return (
     <div
-      className="bg-[#00594f] content-stretch flex flex-col items-center justify-center relative rounded-[41943000px] shrink-0 size-[50px]"
+      className={`${isActive ? "bg-[#00594f]" : "bg-[#343a40] group-hover:bg-[#00594f]"} content-stretch flex flex-col items-center justify-center relative rounded-[41943000px] shrink-0 size-[50px] transition-colors`}
       data-name="Container"
     >
       <div
@@ -425,25 +425,25 @@ function Text() {
   );
 }
 
-function TextIcon() {
+function TextIcon({ isActive = false }: { isActive?: boolean }) {
   return (
     <div
       className="content-stretch flex gap-[16px] items-start relative shrink-0 w-full"
       data-name="Text + Icon"
     >
-      <Container1 />
+      <Container1 isActive={isActive} />
       <Text />
     </div>
   );
 }
 
-function Container() {
+function Container({ isActive = false }: { isActive?: boolean }) {
   return (
     <div
       className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-w-0 relative"
       data-name="Container"
     >
-      <TextIcon />
+      <TextIcon isActive={isActive} />
       <div className="flex flex-col font-['Poppins',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-black text-left tracking-[1px] w-full">
         <p className="leading-[24px]">
           CalSavers automatically syncs employee contribution information from your payroll provider and sends savings rate changes back when needed.
@@ -453,10 +453,10 @@ function Container() {
   );
 }
 
-function Container3() {
+function Container3({ isActive = false }: { isActive?: boolean }) {
   return (
     <div
-      className="bg-[#343a40] content-stretch flex flex-col items-center justify-center relative rounded-[41943000px] shrink-0 size-[50px]"
+      className={`${isActive ? "bg-[#00594f]" : "bg-[#343a40] group-hover:bg-[#00594f]"} content-stretch flex flex-col items-center justify-center relative rounded-[41943000px] shrink-0 size-[50px] transition-colors`}
       data-name="Container"
     >
       <div
@@ -540,7 +540,7 @@ function Text1() {
       className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-0 not-italic relative text-left"
       data-name="Text"
     >
-      <p className="font-['Poppins',sans-serif] font-semibold leading-[21px] relative shrink-0 text-[#343a40] text-[14px] tracking-[1.5px] uppercase whitespace-nowrap">
+      <p className="font-['Poppins',sans-serif] font-semibold leading-[21px] relative shrink-0 text-[#80641F] text-[14px] tracking-[1.5px] uppercase whitespace-nowrap">
         180° Integration
       </p>
       <div className="flex flex-col font-['Poppins',sans-serif] font-medium justify-center leading-[0] min-w-full relative shrink-0 text-[20px] text-black tracking-[1px] w-full min-w-0">
@@ -550,25 +550,25 @@ function Text1() {
   );
 }
 
-function TextIcon1() {
+function TextIcon1({ isActive = false }: { isActive?: boolean }) {
   return (
     <div
       className="content-stretch flex gap-[16px] items-start relative shrink-0 w-full"
       data-name="Text + Icon"
     >
-      <Container3 />
+      <Container3 isActive={isActive} />
       <Text1 />
     </div>
   );
 }
 
-function Container2() {
+function Container2({ isActive = false }: { isActive?: boolean }) {
   return (
     <div
       className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-w-0 relative"
       data-name="Container"
     >
-      <TextIcon1 />
+      <TextIcon1 isActive={isActive} />
       <div className="flex flex-col font-['Poppins',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-black text-left tracking-[1px] w-full">
         <p className="leading-[24px]">
           Your payroll provider manually uploads contribution rates updated <strong>by you, the employer, every month.</strong> This option is available for those payroll providers who do not currently connect with a 360° integration to CalSavers.
@@ -592,7 +592,7 @@ function Toggle({
       data-name="Toggle"
     >
       <button
-        className="bg-white flex-[1_0_0] min-w-0 relative rounded-[8px] self-stretch w-full md:w-auto"
+        className="bg-white flex-[1_0_0] min-w-0 relative rounded-[8px] self-stretch w-full md:w-auto group"
         data-name="IntegrationRadios"
       >
         <div className="overflow-clip rounded-[inherit] size-full">
@@ -615,7 +615,7 @@ function Toggle({
                 />
               )}
             </div>
-            <Container />
+            <Container isActive={is360Selected} />
           </div>
         </div>
         <div
@@ -624,7 +624,7 @@ function Toggle({
         />
       </button>
       <button
-        className="bg-white flex-[1_0_0] min-w-0 relative rounded-[8px] w-full md:w-auto"
+        className="bg-white flex-[1_0_0] min-w-0 relative rounded-[8px] w-full md:w-auto group"
         data-name="IntegrationRadios"
       >
         <div
@@ -650,7 +650,7 @@ function Toggle({
               />
             )}
           </div>
-          <Container2 />
+          <Container2 isActive={is180Selected} />
         </div>
       </button>
     </div>
@@ -694,7 +694,7 @@ function TabText({
       data-name="Tab Text"
     >
       <p
-        className={`leading-[21px] relative shrink-0 text-[14px] tracking-[1.5px] uppercase transition-colors ${isActive ? "text-[#80641f]" : "text-black"}`}
+        className={`leading-[21px] relative shrink-0 text-[14px] tracking-[1.5px] uppercase transition-colors ${isActive ? "text-[#80641f]" : "text-[#80641f]"}`}
       >
         {topLabel}
       </p>
@@ -787,7 +787,7 @@ function TabText1({
       data-name="Tab Text"
     >
       <p
-        className={`leading-[21px] relative shrink-0 text-[14px] tracking-[1.5px] uppercase whitespace-nowrap transition-colors ${isActive ? "text-[#80641f]" : "text-black"}`}
+        className={`leading-[21px] relative shrink-0 text-[14px] tracking-[1.5px] uppercase whitespace-nowrap transition-colors ${isActive ? "text-[#80641f]" : "text-[#80641f]"}`}
       >
         Setup Guide
       </p>
@@ -874,7 +874,7 @@ function TabText2({
       data-name="Tab Text"
     >
       <p
-        className={`leading-[21px] relative shrink-0 text-[14px] tracking-[1.5px] uppercase transition-colors ${isActive ? "text-[#80641f]" : "text-black"}`}
+        className={`leading-[21px] relative shrink-0 text-[14px] tracking-[1.5px] uppercase transition-colors ${isActive ? "text-[#80641f]" : "text-[#80641f]"}`}
       >
         Setup Guide
       </p>

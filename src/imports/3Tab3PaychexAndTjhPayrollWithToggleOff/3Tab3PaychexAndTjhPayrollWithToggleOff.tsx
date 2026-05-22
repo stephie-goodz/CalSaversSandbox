@@ -688,7 +688,7 @@ function AccordionExpanded4() {
 function Text6() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-name="Text">
-      <p className="font-['Poppins',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full whitespace-pre-wrap">{"Then you can select Paychex or TJH Payroll from the screen to link up the integration and sign the agreement.\n\nOnce setup is complete, log into your CalSavers dashboard to verify the connection status. You should see a \"Connected\" badge."}</p>
+      <p className="font-['Poppins',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full whitespace-pre-wrap">{"Then you can select Paychex or TJH Payroll from the screen to link up the integration and sign the agreement.\n\nPaychex users must sign a Docusign from Paychex that will be emailed to you. Once signed, the integration is complete.\n\nOnce setup is complete, log into your CalSavers dashboard to verify the connection status. You should see a \"Connected\" badge."}</p>
     </div>
   );
 }

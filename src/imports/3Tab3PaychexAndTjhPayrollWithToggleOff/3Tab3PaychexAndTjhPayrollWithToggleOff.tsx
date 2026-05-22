@@ -460,7 +460,7 @@ function NumberContainer1() {
 function TextContainer1() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-px relative" data-name="Text Container">
-      <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] min-w-full not-italic relative shrink-0 text-[#00594f] text-[16px] tracking-[1px] w-[min-content]">Start the integration set up</p>
+      <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] min-w-full not-italic relative shrink-0 text-[#00594f] text-[16px] tracking-[1px] w-[min-content]">Go to “Payroll Provider” to begin adding your provider</p>
     </div>
   );
 }
@@ -492,14 +492,10 @@ function Text3() {
       <div className="font-['Poppins',sans-serif] leading-[0] not-italic relative shrink-0 text-[#6b6b6b] text-[0px] tracking-[1px] w-full whitespace-pre-wrap">
         <p className="mb-0 text-[16px]">
           
-          <span className="leading-[24px]">{`Go to the employer portal and select “Payroll Provider” on the left-hand side of the screen under Dashboard.`}</span>
+          <span className="leading-[24px]">{`Select "Payroll integration" on the left-hand side of the screen under Dashboard. Select “Add New” to start the payroll integration process.`}</span>
         </p>
         <p className="leading-[24px] mb-0 text-[16px]">​</p>
-        <p className="leading-[24px] mb-0 text-[16px]">Select “Add New” to start the payroll integration process.</p>
-        <p className="leading-[24px] mb-0 text-[16px]">​</p>
-        <p className="leading-[24px] mb-0 text-[16px]">{`Choose “I have a different payroll provider” and search for your payroll vendor in the Payroll Integrations Inc. participating vendor list. `}</p>
-        <p className="leading-[24px] mb-0 text-[16px]">​</p>
-        <p className="leading-[24px] text-[16px]">If your payroll service participates, you will be able to continue through the set up process</p>
+        <p className="leading-[24px] mb-0 text-[16px]">When prompted, choose your payroll provider by selecting either Paychex or TJH from the radio options, then continue.</p>
       </div>
     </div>
   );
@@ -663,7 +659,7 @@ function NumberContainer4() {
 function TextContainer4() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-px relative" data-name="Text Container">
-      <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] min-w-full not-italic relative shrink-0 text-[#00594f] text-[16px] tracking-[1px] w-[min-content]">Connect your payroll provider and finish setup</p>
+      <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] min-w-full not-italic relative shrink-0 text-[#00594f] text-[16px] tracking-[1px] w-[min-content]">Complete setup and verify connection</p>
     </div>
   );
 }

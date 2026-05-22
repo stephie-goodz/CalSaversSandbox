@@ -404,10 +404,13 @@ function Tabs() {
 
 function Switch() {
   return (
-    <div className="col-1 ml-[7px] mt-[6px] relative row-1 size-[12px]" data-name="Switch">
-      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12 12">
+    <div className="col-1 ml-[21px] mt-px relative row-1 size-[22px]" data-name="Switch">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 22 22">
         <g id="Switch">
-          <circle cx="6" cy="6" fill="var(--fill-0, #828282)" id="Ellipse 1" r="5.5" stroke="var(--stroke-0, #828282)" />
+          <circle cx="11" cy="11" fill="var(--fill-0, white)" id="Ellipse 1" r="11" />
+          <g id="Frame 1344">
+            <path d="M6.99995 11.6562L9.51411 14.1704L15.171 8.51355" id="Rectangle 47" stroke="var(--stroke-0, #00594F)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+          </g>
         </g>
       </svg>
     </div>
@@ -417,7 +420,7 @@ function Switch() {
 function Group5() {
   return (
     <button className="cursor-pointer grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
-      <div className="bg-[#e6e6e6] border border-[#d3d3d3] border-solid col-1 h-[24px] ml-0 mt-0 relative rounded-[24px] row-1 w-[44px]" data-name="Background" />
+      <div className="bg-[#00594f] col-1 h-[24px] ml-0 mt-0 relative rounded-[24px] row-1 w-[44px]" data-name="Background" />
       <Switch />
     </button>
   );
@@ -425,11 +428,11 @@ function Group5() {
 
 function Frame5() {
   return (
-    <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full md:w-[392px] min-w-0">
-      <p className="font-['Poppins',sans-serif] italic leading-[24px] relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full min-w-0 break-words">Need a simplified walk-though?</p>
+    <div className="content-stretch flex flex-col gap-[4px] items-start relative flex-1 min-w-0">
+      <p className="font-['Poppins',sans-serif] italic leading-[24px] relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full min-w-0 break-words">Need a more detailed walk-through?</p>
       <div className="content-stretch flex items-start relative shrink-0 w-full" data-name="QuickViewToggle">
         <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Toggle Switch">
-          <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[1px] flex-1 min-w-0 break-words">Toggle Quick Overview Instructions</p>
+          <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[1px] min-w-0 break-words">Toggle Detailed Instructions</p>
           <Group5 />
         </div>
       </div>

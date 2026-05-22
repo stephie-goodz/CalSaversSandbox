@@ -618,11 +618,11 @@ function Group6() {
 
 function Frame() {
   return (
-    <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-[392px]">
-      <p className="font-['Poppins',sans-serif] italic italic leading-[24px] min-w-full relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-[min-content]">Need a simplified walk-though?</p>
-      <div className="content-stretch flex items-start relative shrink-0" data-name="QuickViewToggle">
-        <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-name="Toggle Switch">
-          <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[1px] whitespace-nowrap">Toggle Quick Overview Instructions</p>
+    <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0">
+      <p className="font-['Poppins',sans-serif] italic leading-[24px] relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full min-w-0 break-words">Untoggle to see a more detailed walk-though</p>
+      <div className="content-stretch flex items-start relative shrink-0 w-full" data-name="QuickViewToggle">
+        <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Toggle Switch">
+          <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[1px] min-w-0 break-words">Quick Overview Instructions</p>
           <Group6 />
         </div>
       </div>

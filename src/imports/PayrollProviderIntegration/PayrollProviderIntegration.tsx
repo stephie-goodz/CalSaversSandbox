@@ -275,7 +275,7 @@ function InnerContainer2() {
         </div>
       </div>
       <div className="flex flex-col font-['Poppins',sans-serif] font-semibold justify-center leading-[0] min-w-full not-italic relative shrink-0 text-[#6b6b6b] text-[16px] text-center tracking-[1px] w-full min-w-0">
-        <p className="leading-[24px]">{`Establish a link between your payroll provider and CalSavers, commonly referred to as payroll integration, to simplify your CalSavers experience. `}</p>
+        <p className="leading-[24px]">{`Establish a connection between your payroll provider and CalSavers to simplify your CalSavers experience.`}</p>
       </div>
     </div>
   );
@@ -444,12 +444,9 @@ function Container() {
       data-name="Container"
     >
       <TextIcon />
-      <div className="flex flex-col font-['Poppins',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-black text-left tracking-[1px] w-full">
+      <div className="flex flex-col font-['Poppins',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-black text-left tracking-[1px] w-full">
         <p className="leading-[24px]">
-          CalSavers retrieves employee and contribution data
-          from your payroll provider and sends updated employee
-          savings rate changes back to your provider, when
-          applicable.
+          CalSavers automatically syncs employee contribution information from your payroll provider and sends savings rate changes back when needed.
         </p>
       </div>
     </div>
@@ -572,13 +569,9 @@ function Container2() {
       data-name="Container"
     >
       <TextIcon1 />
-      <div className="flex flex-col font-['Poppins',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-black text-left tracking-[1px] w-full">
+      <div className="flex flex-col font-['Poppins',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-black text-left tracking-[1px] w-full">
         <p className="leading-[24px]">
-          Payroll provider manually uploads update contributions
-          rates updated by the employer every month. This option
-          is available for those payroll providers who do not
-          currently connect with a 360° integration to
-          CalSavers.
+          Your payroll provider manually uploads contribution rates updated <strong>by you, the employer, every month.</strong> This option is available for those payroll providers who do not currently connect with a 360° integration to CalSavers.
         </p>
       </div>
     </div>
@@ -701,7 +694,7 @@ function TabText({
       data-name="Tab Text"
     >
       <p
-        className={`leading-[21px] relative shrink-0 text-[14px] tracking-[1.5px] uppercase transition-colors ${isActive ? "text-[#80641f]" : "text-[#80641f]"}`}
+        className={`leading-[21px] relative shrink-0 text-[14px] tracking-[1.5px] uppercase transition-colors ${isActive ? "text-[#80641f]" : "text-black"}`}
       >
         {topLabel}
       </p>
@@ -794,7 +787,7 @@ function TabText1({
       data-name="Tab Text"
     >
       <p
-        className={`leading-[21px] relative shrink-0 text-[14px] tracking-[1.5px] uppercase whitespace-nowrap text-[#80641f]`}
+        className={`leading-[21px] relative shrink-0 text-[14px] tracking-[1.5px] uppercase whitespace-nowrap transition-colors ${isActive ? "text-[#80641f]" : "text-black"}`}
       >
         Setup Guide
       </p>
@@ -881,7 +874,7 @@ function TabText2({
       data-name="Tab Text"
     >
       <p
-        className={`leading-[21px] relative shrink-0 text-[14px] tracking-[1.5px] uppercase text-[#80641f]`}
+        className={`leading-[21px] relative shrink-0 text-[14px] tracking-[1.5px] uppercase transition-colors ${isActive ? "text-[#80641f]" : "text-black"}`}
       >
         Setup Guide
       </p>
@@ -1071,11 +1064,11 @@ function Tabs({
           active180Tab={active180Tab}
         />
         <div
-          className="hidden md:flex content-stretch flex-nowrap gap-[8px] lg:gap-[16px] items-start mb-[-1px] relative shrink-0 w-full z-[2]"
+          className="hidden md:flex content-stretch flex-nowrap gap-[8px] lg:gap-[16px] items-start lg:items-stretch mb-[-1px] relative shrink-0 w-full z-[2]"
           data-name="Tabs"
         >
           <div
-            className={`content-stretch flex flex-col h-[72px] items-start justify-end relative rounded-tl-[8px] rounded-tr-[8px] flex-1 min-w-0 px-3 lg:px-6 transition-colors ${isTab1Active ? "bg-white" : "bg-[#e5eeed] hover:bg-[#BFD5D3] cursor-pointer"}`}
+            className={`content-stretch flex flex-col min-h-[72px] items-start justify-end relative rounded-tl-[8px] rounded-tr-[8px] flex-1 min-w-0 px-3 lg:px-6 transition-colors ${isTab1Active ? "bg-white" : "bg-[#f2f0e9] hover:bg-[#BFD5D3] cursor-pointer"}`}
             data-name="TabSetup"
             data-tab-active={isTab1Active}
           >
@@ -1090,7 +1083,7 @@ function Tabs({
             <Spacer />
           </div>
           <button
-            className={`content-stretch cursor-pointer flex flex-col h-[72px] items-start justify-center relative rounded-tl-[8px] rounded-tr-[8px] flex-1 min-w-0 px-3 lg:px-6 transition-colors ${isTab2Active ? "bg-white" : "bg-[#e5eeed] hover:bg-[#BFD5D3]"}`}
+            className={`content-stretch cursor-pointer flex flex-col min-h-[72px] items-start justify-center relative rounded-tl-[8px] rounded-tr-[8px] flex-1 min-w-0 px-3 lg:px-6 transition-colors ${isTab2Active ? "bg-white" : "bg-[#f2f0e9] hover:bg-[#BFD5D3]"}`}
             data-name="TabSetup"
             data-tab-active={isTab2Active}
           >
@@ -1122,11 +1115,11 @@ function Tabs({
         active180Tab={active180Tab}
       />
       <div
-        className="hidden md:flex content-stretch flex-nowrap gap-[8px] lg:gap-[16px] items-start mb-[-1px] relative shrink-0 w-full z-[2]"
+        className="hidden md:flex content-stretch flex-nowrap gap-[8px] lg:gap-[16px] items-start lg:items-stretch mb-[-1px] relative shrink-0 w-full z-[2]"
         data-name="Tabs"
       >
         <div
-          className={`content-stretch flex flex-col min-h-[72px] items-start justify-end relative rounded-tl-[8px] rounded-tr-[8px] flex-1 min-w-0 px-3 lg:px-6 transition-colors ${isTab1Active ? "bg-white" : "bg-[#e5eeed] hover:bg-[#BFD5D3] cursor-pointer"}`}
+          className={`content-stretch flex flex-col min-h-[72px] items-start justify-end relative rounded-tl-[8px] rounded-tr-[8px] flex-1 min-w-0 px-3 lg:px-6 transition-colors ${isTab1Active ? "bg-white" : "bg-[#f2f0e9] hover:bg-[#BFD5D3] cursor-pointer"}`}
           data-name="TabSetup"
           data-tab-active={isTab1Active}
         >
@@ -1141,7 +1134,7 @@ function Tabs({
           <Spacer />
         </div>
         <button
-          className={`content-stretch cursor-pointer flex flex-col min-h-[72px] items-start justify-center relative rounded-tl-[8px] rounded-tr-[8px] flex-1 min-w-0 px-3 lg:px-6 transition-colors ${isTab2Active ? "bg-white" : "bg-[#e5eeed] hover:bg-[#BFD5D3]"}`}
+          className={`content-stretch cursor-pointer flex flex-col min-h-[72px] items-start justify-center relative rounded-tl-[8px] rounded-tr-[8px] flex-1 min-w-0 px-3 lg:px-6 transition-colors ${isTab2Active ? "bg-white" : "bg-[#f2f0e9] hover:bg-[#BFD5D3]"}`}
           data-name="TabSetup"
           data-tab-active={isTab2Active}
         >
@@ -1156,7 +1149,7 @@ function Tabs({
           <Spacer1 />
         </button>
         <button
-          className={`content-stretch cursor-pointer flex flex-col min-h-[72px] items-start justify-center relative rounded-tl-[8px] rounded-tr-[8px] flex-1 min-w-0 px-3 lg:px-6 transition-colors ${isTab3Active ? "bg-white" : "bg-[#e5eeed] hover:bg-[#BFD5D3]"}`}
+          className={`content-stretch cursor-pointer flex flex-col min-h-[72px] items-start justify-center relative rounded-tl-[8px] rounded-tr-[8px] flex-1 min-w-0 px-3 lg:px-6 transition-colors ${isTab3Active ? "bg-white" : "bg-[#f2f0e9] hover:bg-[#BFD5D3]"}`}
           data-name="TabSetup"
           data-tab-active={isTab3Active}
         >
@@ -1179,13 +1172,7 @@ function Frame11() {
         Automated Payroll Sync Overview
       </p>
       <p className="font-['Poppins',sans-serif] leading-[24px] relative shrink-0 text-[#6b6b6b] text-[16px] w-full whitespace-pre-wrap">
-        CalSavers offers seamless 360° integration by retrieving
-        employee and contribution data from your payroll
-        provider. You can fully integrate your payroll in two
-        ways: directly through Paychex or TJH Payroll, or by
-        using Payroll Integrations Inc. as a third-party
-        service, which connects with a growing list of
-        participating payroll providers.
+        You can fully integrate your payroll through Payroll Integrations Inc., a third-party service that connects CalSavers with a growing list of participating payroll providers. Paychex and TJH Payroll also offer their own direct 360° integrations with CalSavers.
         <br aria-hidden="true" />
         <br aria-hidden="true" />
         {`If your payroll provider isn't available for 360° integration, you may be able to connect your payroll for a 180° integration (payroll file upload).`}
@@ -1472,7 +1459,7 @@ function DropdownGroup({
               <button
                 key={index}
                 onClick={() => onSelect(provider)}
-                className="w-full text-left px-[16px] py-[12px] hover:bg-[#f2f0e9] font-['Poppins',sans-serif] text-[16px] text-[#1a1a1a] leading-[24px] tracking-[1px] transition-colors"
+                className="w-full text-left px-[16px] py-[12px] hover:bg-[#e5eeed] font-['Poppins',sans-serif] text-[16px] text-[#1a1a1a] leading-[24px] tracking-[1px] transition-colors"
               >
                 {provider}
               </button>
@@ -1582,9 +1569,7 @@ function Form() {
       className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full z-[2]"
       data-name="form"
     >
-      <div className="flex flex-col font-['Poppins',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#1a1a1a] text-[16px] tracking-[1px] w-full">
-        <p className="leading-[24px]">{`If you're not using Paychex or TJH Hull for your payroll services, consider checking if your payroll provider is among those that partner with Payroll Integrations Inc. for a monthly fee.`}</p>
-      </div>
+
       <div
         className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full"
         data-name="Dropdown/PI"
@@ -1603,6 +1588,9 @@ function Form() {
         ) : (
           <AssistiveText message={errorMessage} />
         )}
+      </div>
+      <div className="flex flex-col font-['Poppins',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#6B6B6B] text-[14px] tracking-[1px] w-full">
+        <p className="leading-[24px] italic"><sup>*</sup>{`If you use Paychex or TJH Hull for your payroll services, see this instruction in the “Learn more about Paychex and TJH Payroll integration” section.`}</p>
       </div>
     </div>
   );
@@ -1745,7 +1733,7 @@ function Table() {
       >
         <div className="content-stretch flex flex-col items-start overflow-clip relative rounded-[inherit] size-full">
           <div
-            className="bg-[#f2f0e9] content-stretch flex flex-col items-start justify-center relative shrink-0 w-full"
+            className="bg-[#F2F0E9] content-stretch flex flex-col items-start justify-center relative shrink-0 w-full"
             data-name="Column Header"
           >
             <div
@@ -1778,7 +1766,7 @@ function Table() {
       >
         <div className="content-stretch flex flex-col items-start overflow-clip relative rounded-[inherit] size-full">
           <div
-            className="bg-[#f2f0e9] content-stretch flex flex-col items-start justify-center relative shrink-0 w-full"
+            className="bg-[#F2F0E9] content-stretch flex flex-col items-start justify-center relative shrink-0 w-full"
             data-name="Column Header"
           >
             <div
@@ -1811,7 +1799,7 @@ function Table() {
       >
         <div className="content-stretch flex flex-col items-start overflow-clip relative rounded-[inherit] size-full">
           <div
-            className="bg-[#f2f0e9] content-stretch flex flex-col items-start justify-center relative shrink-0 w-full"
+            className="bg-[#F2F0E9] content-stretch flex flex-col items-start justify-center relative shrink-0 w-full"
             data-name="Column Header"
           >
             <div
@@ -1844,7 +1832,7 @@ function Table() {
       >
         <div className="content-stretch flex flex-col items-start overflow-clip relative rounded-[inherit] size-full">
           <div
-            className="bg-[#f2f0e9] content-stretch flex flex-col items-start justify-center relative shrink-0 w-full"
+            className="bg-[#F2F0E9] content-stretch flex flex-col items-start justify-center relative shrink-0 w-full"
             data-name="Column Header"
           >
             <div
@@ -1877,7 +1865,7 @@ function Table() {
       >
         <div className="content-stretch flex flex-col items-start overflow-clip relative rounded-[inherit] size-full">
           <div
-            className="bg-[#f2f0e9] content-stretch flex flex-col items-start justify-center relative shrink-0 w-full"
+            className="bg-[#F2F0E9] content-stretch flex flex-col items-start justify-center relative shrink-0 w-full"
             data-name="Column Header"
           >
             <div
@@ -2015,15 +2003,11 @@ function Text4() {
       data-name="Text"
     >
       <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] relative shrink-0 text-black w-full">
-        Paychex and TJH Integration Overview
+        Paychex and TJH Payroll Integration Overview
       </p>
       <p className="font-['Poppins',sans-serif] leading-[0] relative shrink-0 text-[#6b6b6b] w-full whitespace-pre-wrap">
         <span className="leading-[24px]">
-          We provide comprehensive 360° integration with payroll
-          providers such as Paychex and TJH Payroll. By
-          utilizing these services, CalSavers will effortlessly
-          and securely manage and transmit employee
-          contributions on your behalf.
+          Paychex and TJH Payroll offer their own direct 360° integrations with CalSavers, allowing employee contribution information to be securely transmitted automatically between your payroll provider and CalSavers.<br /><br />Pricing and setup support for these services are managed directly by the payroll provider. For pricing details or assistance with setup, please contact your provider directly.
           <br aria-hidden="true" />
           <br aria-hidden="true" />
         </span>

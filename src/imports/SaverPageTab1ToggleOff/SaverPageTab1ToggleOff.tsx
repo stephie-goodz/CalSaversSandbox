@@ -635,7 +635,7 @@ function Text() {
 
 function ButtonGroup1() {
   return (
-    <div className="content-stretch cursor-pointer flex gap-[16px] items-center relative shrink-0" data-name="Button Group">
+    <div className="content-stretch cursor-pointer flex gap-[16px] flex-wrap items-center relative shrink-0" data-name="Button Group">
       <a className="bg-[#00594f] content-stretch flex gap-[8px] items-center justify-center px-[16px] py-[8px] relative rounded-[4px] shrink-0" href="https://saver.calsavers.com/californiaeetpl/member/webreg/viewCollectErInfo.cs" target="_blank" data-name="Button">
         <div aria-hidden="true" className="absolute border border-[#00473f] border-solid inset-[-0.5px] pointer-events-none rounded-[4.5px]" />
         <div className="flex flex-col font-['Poppins',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-center text-white tracking-[1px] whitespace-nowrap">
@@ -975,18 +975,6 @@ function TextIcon() {
   );
 }
 
-function Spacer() {
-  return (
-    <div className="h-px relative shrink-0 w-full" data-name="Spacer">
-      <div className="flex flex-col items-center size-full">
-        <div className="content-stretch flex flex-col items-center px-px relative size-full">
-          <div className="bg-white h-[3px] relative shrink-0 w-full" data-name="Spacer" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function Group() {
   return (
     <div className="absolute inset-[5.98%_5.94%_5.98%_6.05%]" data-name="Group">
@@ -1007,49 +995,51 @@ function Group() {
   );
 }
 
-function TabText1() {
+function TabText1({ isActive = false }: { isActive?: boolean }) {
   return (
     <div className="content-stretch flex flex-col h-full items-start justify-center relative shrink-0" data-name="Tab Text">
-      <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] not-italic relative shrink-0 text-[#00594f] text-[16px] text-left tracking-[1px] whitespace-nowrap">Opt-Out of CalSavers</p>
+      <p className={`font-['Poppins',sans-serif] font-semibold leading-[24px] not-italic relative shrink-0 ${isActive ? "text-black" : "text-[#00594f]"} text-[16px] text-left tracking-[1px] whitespace-nowrap`}>Opt-Out of CalSavers</p>
     </div>
   );
 }
 
-function TextIcon1() {
+function TextIcon1({ isActive = false }: { isActive?: boolean }) {
   return (
     <div className="content-stretch flex flex-[1_0_0] gap-[8px] items-center min-h-px px-[16px] relative" data-name="Text + Icon">
       <div className="overflow-clip relative shrink-0 size-[32px]" data-name="Type=Exempt">
         <Group />
       </div>
-      <TabText1 />
+      <TabText1 isActive={isActive} />
     </div>
   );
 }
 
-function Spacer1() {
-  return (
-    <div className="h-px opacity-0 relative shrink-0 w-full" data-name="Spacer">
-      <div className="flex flex-col items-center size-full">
-        <div className="content-stretch flex flex-col items-center px-px relative size-full">
-          <div className="bg-white h-[2px] relative shrink-0 w-full" data-name="Spacer" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Tabs() {
+function Tabs({ activeTab = 'signup' }: { activeTab?: 'signup' | 'optout' }) {
+  const signUpActive = activeTab === 'signup';
+  const optOutActive = activeTab === 'optout';
   return (
     <div className="content-stretch flex gap-[16px] items-start mb-[-1px] relative shrink-0 w-[996px] z-[2]" data-name="Tabs">
-      <div className="bg-white content-stretch flex flex-col h-[72px] items-start justify-end relative rounded-tl-[8px] rounded-tr-[8px] shrink-0" data-name="TabSetup">
+      <div className={`${signUpActive ? 'bg-white justify-end' : 'bg-[#f2f0e9] justify-center'} content-stretch flex flex-col h-[72px] items-start relative rounded-tl-[8px] rounded-tr-[8px] shrink-0`} data-name="TabSetup">
         <div aria-hidden="true" className="absolute border-[rgba(0,89,79,0.5)] border-l border-r border-solid border-t inset-0 pointer-events-none rounded-tl-[8px] rounded-tr-[8px]" />
         <TextIcon />
-        <Spacer />
+        <div className={`h-px relative shrink-0 w-full${!signUpActive ? ' opacity-0' : ''}`} data-name="Spacer">
+          <div className="flex flex-col items-center size-full">
+            <div className="content-stretch flex flex-col items-center px-px relative size-full">
+              <div className="bg-white h-[3px] relative shrink-0 w-full" data-name="Spacer" />
+            </div>
+          </div>
+        </div>
       </div>
-      <button className="bg-[#e5eeed] content-stretch cursor-pointer flex flex-col h-[72px] items-start justify-center max-w-[340px] relative rounded-tl-[8px] rounded-tr-[8px] shrink-0" data-name="TabSetup">
+      <button className={`${optOutActive ? 'bg-white justify-end' : 'bg-[#f2f0e9] justify-center'} content-stretch cursor-pointer flex flex-col h-[72px] items-start max-w-[340px] relative rounded-tl-[8px] rounded-tr-[8px] shrink-0`} data-name="TabSetup">
         <div aria-hidden="true" className="absolute border border-[rgba(0,89,79,0.5)] border-solid inset-0 pointer-events-none rounded-tl-[8px] rounded-tr-[8px]" />
-        <TextIcon1 />
-        <Spacer1 />
+        <TextIcon1 isActive={optOutActive} />
+        <div className={`h-px relative shrink-0 w-full${!optOutActive ? ' opacity-0' : ''}`} data-name="Spacer">
+          <div className="flex flex-col items-center size-full">
+            <div className="content-stretch flex flex-col items-center px-px relative size-full">
+              <div className="bg-white h-[2px] relative shrink-0 w-full" data-name="Spacer" />
+            </div>
+          </div>
+        </div>
       </button>
     </div>
   );
@@ -1057,10 +1047,13 @@ function Tabs() {
 
 function Switch() {
   return (
-    <div className="col-1 ml-[7px] mt-[6px] relative row-1 size-[12px]" data-name="Switch">
-      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12 12">
+    <div className="col-1 ml-[21px] mt-px relative row-1 size-[22px]" data-name="Switch">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 22 22">
         <g id="Switch">
-          <circle cx="6" cy="6" fill="var(--fill-0, #828282)" id="Ellipse 1" r="5.5" stroke="var(--stroke-0, #828282)" />
+          <circle cx="11" cy="11" fill="var(--fill-0, white)" id="Ellipse 1" r="11" />
+          <g id="Frame 1344">
+            <path d="M6.99995 11.6562L9.51411 14.1704L15.171 8.51355" id="Rectangle 47" stroke="var(--stroke-0, #00594F)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+          </g>
         </g>
       </svg>
     </div>
@@ -1070,7 +1063,7 @@ function Switch() {
 function Group4() {
   return (
     <button className="cursor-pointer grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
-      <div className="bg-[#e6e6e6] border border-[#d3d3d3] border-solid col-1 h-[24px] ml-0 mt-0 relative rounded-[24px] row-1 w-[44px]" data-name="Background" />
+      <div className="bg-[#00594f] col-1 h-[24px] ml-0 mt-0 relative rounded-[24px] row-1 w-[44px]" data-name="Background" />
       <Switch />
     </button>
   );
@@ -1078,11 +1071,11 @@ function Group4() {
 
 function Frame6() {
   return (
-    <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 ">
-      <p className="font-['Poppins',sans-serif] italic leading-[24px] relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full min-w-0 break-words">Need a simplified walk-though?</p>
-      <div className="content-stretch flex items-start relative shrink-0 w-full " data-name="QuickViewToggle">
-        <div className="content-stretch flex  gap-[8px] items-center relative shrink-0 w-full " data-name="Toggle Switch">
-          <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[1px] min-w-0 break-words">Toggle Quick Overview Instructions</p>
+    <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0">
+      <p className="font-['Poppins',sans-serif] italic leading-[24px] relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full min-w-0 break-words">Need a more detailed walk-through?</p>
+      <div className="content-stretch flex items-start relative shrink-0 w-full" data-name="QuickViewToggle">
+        <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Toggle Switch">
+          <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] not-italic relative shrink-0 text-[16px] text-black text-right tracking-[1px] min-w-0 break-words">Toggle Detailed Instructions</p>
           <Group4 />
         </div>
       </div>

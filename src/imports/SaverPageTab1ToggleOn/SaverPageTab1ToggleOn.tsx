@@ -268,6 +268,14 @@ export function SignUpToggleOnBody() {
             </div>
           </div>
         </div>
+        <div className="w-full h-[1px] bg-[#C3C3C3] shrink-0" />
+        <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full">
+          <p className="font-['Poppins',sans-serif] font-bold leading-[24px] relative shrink-0 text-[16px] text-black tracking-[1px] w-full">Understanding the costs</p>
+          <p className="font-['Poppins',sans-serif] leading-[24px] relative shrink-0 text-[16px] text-[#6b6b6b] tracking-[1px] w-full">
+            {`CalSavers charges fees to pay for program operations and the underlying investments. This can help you save more as you invest for the long term. Effective May 1, 2026, the fees all savers pay will decrease. `}
+            <a className="font-['Poppins',sans-serif] font-bold text-[#00594f] underline decoration-solid" href="https://saver.calsavers.com/home/savers/program-details.html#cost-understanding" target="_blank">Learn more about fees</a>
+          </p>
+        </div>
       </div>
       <div aria-hidden="true" className="absolute border border-[rgba(0,89,79,0.5)] border-solid inset-0 pointer-events-none rounded-bl-[8px] rounded-br-[8px] rounded-tr-[8px]" />
     </div>

@@ -539,7 +539,7 @@ function Tip() {
 function Text2() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-w-px relative" data-name="Text">
-      <p className="font-['Poppins',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full">Reach out to your payroll provider and request to enable the CalSavers 360° integration. You'll need your CalSavers employer account ID.</p>
+      <p className="font-['Poppins',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full">Reach out to your payroll provider to create the CalSavers deduction line item on your payroll platform.</p>
     </div>
   );
 }
@@ -604,7 +604,7 @@ function NumberContainer1() {
 function TextContainer1() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-px relative" data-name="Text Container">
-      <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] min-w-full not-italic relative shrink-0 text-[#00594f] text-[16px] tracking-[1px] w-[min-content]">Log into the CalSavers employer dashboard to start the integration set up</p>
+      <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] min-w-full not-italic relative shrink-0 text-[#00594f] text-[16px] tracking-[1px] w-[min-content]">Log in your CalSavers account and go to Payroll Provider</p>
     </div>
   );
 }
@@ -739,9 +739,9 @@ function Text4() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-name="Text">
       <div className="font-['Poppins',sans-serif] leading-[0] not-italic relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full whitespace-pre-wrap">
-        <p className="leading-[24px] mb-0">Add or use a previously added bank account that your company will use to send employee contributions.</p>
+        <p className="leading-[24px] mb-0">Add a bank or select a previously added account</p>
         <p className="leading-[24px] mb-0">​</p>
-        <p className="leading-[24px]">{`If your bank account isn’t added, select “Add a bank account” to enter your routing and account numbers. You will have to option to provide a customized account nickname if you have multiple bank accounts. `}</p>
+        <p className="leading-[24px]">{`Select a bank account that your company will use to send employee contributions.`}</p>
       </div>
     </div>
   );
@@ -807,7 +807,7 @@ function NumberContainer3() {
 function TextContainer3() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-px relative" data-name="Text Container">
-      <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] min-w-full not-italic relative shrink-0 text-[#00594f] text-[16px] tracking-[1px] w-[min-content]">Initiate Payroll Integrations LLC flow to register for the integration</p>
+      <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] min-w-full not-italic relative shrink-0 text-[#00594f] text-[16px] tracking-[1px] w-[min-content]">Initiate Payroll Integrations flow to register for the integration</p>
     </div>
   );
 }
@@ -931,7 +931,7 @@ function AccordionExpanded4() {
 function Text6() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-name="Text">
-      <p className="font-['Poppins',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full whitespace-pre-wrap">{"Finish your connection by logging into your payroll provider account. Your payroll provider online service will guide you through their authorization process.\n\nOnce setup is complete, log into your CalSavers dashboard to verify the connection status. You should see a \"Connected\" badge."}</p>
+      <p className="font-['Poppins',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full whitespace-pre-wrap">{"Finish your connection by logging into your payroll provider account and follow on-screen instructions.\n\nOnce setup is complete, you will be re-routed to your CalSavers dashboard. You should see a \"Connected\" badge."}</p>
     </div>
   );
 }
@@ -1725,7 +1725,7 @@ export default function Component1Tab2PayrollIntegrationsIncWithToggleOff() {
           <FooterLinks />
           <FooterLinks1 />
           <div className="font-['Poppins',sans-serif] leading-[0] not-italic relative shrink-0 text-[12px] text-white tracking-[1px] w-full whitespace-pre-wrap">
-            <p className="leading-[18px] mb-0">The CalSavers Retirement Savings Program (“CalSavers” or the “Program”) is an automatic enrollment payroll deduction IRA overseen by the CalSavers Retirement Savings Board (“Board”). Ascensus College Savings Recordkeeping Services, LLC (“ACSR”) is the program administrator. ACSR and its affiliates are responsible for day-to-day program operations. Participants saving through CalSavers beneficially own and have control over their IRAs, as provided in the Program Disclosure Booklet available at saver.calsavers.com. CalSavers is not sponsored by the employer, and therefore the employer is not responsible for the Program or liable as a Program sponsor. Employers are not permitted to endorse the Program or encourage or advise employees on whether to participate, how much (if any) to contribute or provide investment help.</p>
+            <p className="leading-[18px] mb-0">The CalSavers Retirement Savings Program (“CalSavers” or the “Program”) is an automatic enrollment payroll deduction IRA overseen by the CalSavers Retirement Savings Board (“Board”). Ascensus College Savings Recordkeeping Services, Inc. (“ACSR”) is the program administrator. ACSR and its affiliates are responsible for day-to-day program operations. Participants saving through CalSavers beneficially own and have control over their IRAs, as provided in the Program Disclosure Booklet available at saver.calsavers.com. CalSavers is not sponsored by the employer, and therefore the employer is not responsible for the Program or liable as a Program sponsor. Employers are not permitted to endorse the Program or encourage or advise employees on whether to participate, how much (if any) to contribute or provide investment help.</p>
             <p className="leading-[18px] mb-0">CalSavers offers investment options selected by the Board. For more information on CalSavers’ investment options go to saver.calsavers.com. Account balances in CalSavers will vary with market conditions. Investments in CalSavers are not guaranteed or insured by the Board, the State of California, the Federal Deposit Insurance Corporation, or any other organization.</p>
             <p className="leading-[18px] mb-0">​</p>
             <p className="leading-[18px] mb-0">CalSavers is a completely voluntary retirement program. Savers may opt out at any time or reduce or increase the amount of payroll contributions. If a saver opts out they can later opt back into CalSavers.</p>

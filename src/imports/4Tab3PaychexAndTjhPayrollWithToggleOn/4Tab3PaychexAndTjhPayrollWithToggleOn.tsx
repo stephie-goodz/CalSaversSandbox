@@ -456,7 +456,7 @@ function NumberContainer() {
 function TextContainer() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start leading-[24px] not-italic relative shrink-0 text-[16px] tracking-[1px] w-full" data-name="Text Container">
-      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Go to “Payroll Provider” to begin adding your provider</p>
+      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Go to “Payroll Provider” to begin the integration process</p>
       <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full whitespace-pre-wrap">{`Select “Add New” and select Paychex or TJH to start the integration.`}</p>
     </div>
   );
@@ -496,7 +496,7 @@ function TextContainer1() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start leading-[24px] min-w-px not-italic relative text-[16px] tracking-[1px]" data-name="Text Container">
       <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Complete setup and verify connection</p>
-      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full whitespace-pre-wrap">{"Then you can select Paychex or TJH Payroll from the screen to link up the integration and sign the agreement.\n\nOnce setup is complete, log into your CalSavers dashboard to verify the connection status. You should see a \"Connected\" badge."}</p>
+      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full whitespace-pre-wrap">{"Then you can select Paychex or TJH Payroll from the screen to link up the integration.\n\nOnce setup is complete, you will be re-routed to your CalSavers dashboard. You should see a \"Connected\" badge."}</p>
     </div>
   );
 }
@@ -535,7 +535,7 @@ function NumberContainer2() {
 function TextContainer2() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start leading-[24px] min-w-px not-italic relative text-[16px] tracking-[1px]" data-name="Text Container">
-      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Log in and add a bank account for employee contributions</p>
+      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Log in and add a bank or select a previously added account</p>
       <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">Once Logged in, go to "Banking Information" and add a bank account that your company will use to send employee contributions.</p>
     </div>
   );

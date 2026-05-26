@@ -487,7 +487,7 @@ function NumberContainer1() {
 function TextContainer1() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start leading-[24px] not-italic relative shrink-0 text-[16px] tracking-[1px] w-full" data-name="Text Container">
-      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Log in to your account and go to “Payroll Provider” to begin adding your provider</p>
+      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Log in your CalSavers account and go to Payroll Provider</p>
       <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">{`Go to payroll provider and select “Add New.” Choose “I have a different payroll provider” and search for your payroll vendor in the Payroll Integrations Inc. participating vendor list. `}</p>
     </div>
   );
@@ -572,8 +572,8 @@ function NumberContainer3() {
 function TextContainer3() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start leading-[24px] min-w-px not-italic relative text-[16px] tracking-[1px]" data-name="Text Container">
-      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Initiate Payroll Integrations LLC flow to register for the integration</p>
-      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">You will then be taken to the Payroll Integrations Inc. connection page to start your payroll connection</p>
+      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Initiate Payroll Integrations flow to register for the integration</p>
+      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">You will then be taken to the Payroll Integrations Inc. connection page to start your payroll integration.</p>
     </div>
   );
 }
@@ -613,7 +613,7 @@ function TextContainer4() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start leading-[24px] min-w-px not-italic relative text-[16px] tracking-[1px]" data-name="Text Container">
       <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Complete setup and verify connection</p>
-      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full whitespace-pre-wrap">{"Finish your connection by logging into your payroll provider account and follow on-screen instructions.\n\nOnce setup is complete, log into your CalSavers dashboard to verify the connection status. You should see a \"Connected\" badge."}</p>
+      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full whitespace-pre-wrap">{"Finish your connection by logging into your payroll provider account and follow on-screen instructions.\n\nOnce setup is complete, you will be re-routed to your CalSavers dashboard to verify the connection status. You should see a \"Connected\" badge."}</p>
     </div>
   );
 }
@@ -1332,7 +1332,7 @@ export default function Component2Tab2PayrollIntegrationsIncWithToggleOn() {
           <FooterLinks />
           <FooterLinks1 />
           <div className="font-['Poppins',sans-serif] leading-[0] not-italic relative shrink-0 text-[12px] text-white tracking-[1px] w-full whitespace-pre-wrap">
-            <p className="leading-[18px] mb-0">The CalSavers Retirement Savings Program (“CalSavers” or the “Program”) is an automatic enrollment payroll deduction IRA overseen by the CalSavers Retirement Savings Board (“Board”). Ascensus College Savings Recordkeeping Services, LLC (“ACSR”) is the program administrator. ACSR and its affiliates are responsible for day-to-day program operations. Participants saving through CalSavers beneficially own and have control over their IRAs, as provided in the Program Disclosure Booklet available at saver.calsavers.com. CalSavers is not sponsored by the employer, and therefore the employer is not responsible for the Program or liable as a Program sponsor. Employers are not permitted to endorse the Program or encourage or advise employees on whether to participate, how much (if any) to contribute or provide investment help.</p>
+            <p className="leading-[18px] mb-0">The CalSavers Retirement Savings Program (“CalSavers” or the “Program”) is an automatic enrollment payroll deduction IRA overseen by the CalSavers Retirement Savings Board (“Board”). Ascensus College Savings Recordkeeping Services, Inc. (“ACSR”) is the program administrator. ACSR and its affiliates are responsible for day-to-day program operations. Participants saving through CalSavers beneficially own and have control over their IRAs, as provided in the Program Disclosure Booklet available at saver.calsavers.com. CalSavers is not sponsored by the employer, and therefore the employer is not responsible for the Program or liable as a Program sponsor. Employers are not permitted to endorse the Program or encourage or advise employees on whether to participate, how much (if any) to contribute or provide investment help.</p>
             <p className="leading-[18px] mb-0">CalSavers offers investment options selected by the Board. For more information on CalSavers’ investment options go to saver.calsavers.com. Account balances in CalSavers will vary with market conditions. Investments in CalSavers are not guaranteed or insured by the Board, the State of California, the Federal Deposit Insurance Corporation, or any other organization.</p>
             <p className="leading-[18px] mb-0">​</p>
             <p className="leading-[18px] mb-0">CalSavers is a completely voluntary retirement program. Savers may opt out at any time or reduce or increase the amount of payroll contributions. If a saver opts out they can later opt back into CalSavers.</p>

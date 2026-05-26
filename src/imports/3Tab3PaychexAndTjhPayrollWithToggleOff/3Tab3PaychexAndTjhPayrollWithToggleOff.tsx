@@ -460,7 +460,7 @@ function NumberContainer1() {
 function TextContainer1() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-px relative" data-name="Text Container">
-      <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] min-w-full not-italic relative shrink-0 text-[#00594f] text-[16px] tracking-[1px] w-[min-content]">Go to “Payroll Provider” to begin adding your provider</p>
+      <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] min-w-full not-italic relative shrink-0 text-[#00594f] text-[16px] tracking-[1px] w-[min-content]">Go to “Payroll Provider” to begin the integration process</p>
     </div>
   );
 }
@@ -495,7 +495,7 @@ function Text3() {
           <span className="leading-[24px]">{`Select "Payroll integration" on the left-hand side of the screen under Dashboard. Select “Add New” to start the payroll integration process.`}</span>
         </p>
         <p className="leading-[24px] mb-0 text-[16px]">​</p>
-        <p className="leading-[24px] mb-0 text-[16px]">When prompted, choose your payroll provider by selecting either Paychex or TJH from the radio options, then continue.</p>
+        <p className="leading-[24px] mb-0 text-[16px]">When prompted, choose your payroll provider by selecting either Paychex or TJH from the options, then continue.</p>
       </div>
     </div>
   );
@@ -561,7 +561,7 @@ function NumberContainer2() {
 function TextContainer2() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-px relative" data-name="Text Container">
-      <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] min-w-full not-italic relative shrink-0 text-[#00594f] text-[16px] tracking-[1px] w-[min-content]">Log in and set up banking for future employee contributions</p>
+      <p className="font-['Poppins',sans-serif] font-semibold leading-[24px] min-w-full not-italic relative shrink-0 text-[#00594f] text-[16px] tracking-[1px] w-[min-content]">Log in and add a bank or select a previously added account</p>
     </div>
   );
 }
@@ -688,7 +688,7 @@ function AccordionExpanded4() {
 function Text6() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-name="Text">
-      <p className="font-['Poppins',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full whitespace-pre-wrap">{"Then you can select Paychex or TJH Payroll from the screen to link up the integration and sign the agreement.\n\nPaychex users must sign a Docusign from Paychex that will be emailed to you. Once signed, the integration is complete.\n\nOnce setup is complete, log into your CalSavers dashboard to verify the connection status. You should see a \"Connected\" badge."}</p>
+      <p className="font-['Poppins',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full whitespace-pre-wrap">{"Then you can select Paychex or TJH Payroll from the screen to link up the integration.\n\nPaychex users must sign a Docusign from Paychex that will be emailed to you. Once signed, the integration is complete.\n\nOnce setup is complete, you will be re-routed to your CalSavers dashboard. You should see a \"Connected\" badge."}</p>
     </div>
   );
 }

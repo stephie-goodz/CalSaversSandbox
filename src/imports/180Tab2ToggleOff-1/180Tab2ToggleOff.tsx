@@ -81,7 +81,8 @@ function Tabs() {
         <TextIcon />
         <Spacer />
       </button>
-      <div className="bg-white content-stretch flex flex-col h-[72px] items-start justify-end relative rounded-tl-[8px] rounded-tr-[8px] shrink-0" data-name="TabSetup">
+      {/* TODO: Remove 'hidden' class below to re-enable this tab when Setup Guide content is ready */}
+      <div className="hidden bg-white content-stretch flex flex-col h-[72px] items-start justify-end relative rounded-tl-[8px] rounded-tr-[8px] shrink-0" data-name="TabSetup">
         <div aria-hidden="true" className="absolute border-[rgba(0,89,79,0.5)] border-l border-r border-solid border-t inset-0 pointer-events-none rounded-tl-[8px] rounded-tr-[8px]" />
         <TextIcon1 />
         <Spacer1 />

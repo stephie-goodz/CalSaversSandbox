@@ -956,11 +956,8 @@ function MobileDropdown({
   if (integrationMode === "180") {
     const options = [
       { value: 1, label: "180° Integration - Overview" },
-      {
-        value: 2,
-        label:
-          "180° Integration - How to integrate payroll with a 180° integration",
-      },
+      // TODO: Re-enable the option below when Setup Guide content is ready
+      // { value: 2, label: "180° Integration - How to integrate payroll with a 180° integration" },
     ];
     return (
       <div
@@ -1082,8 +1079,9 @@ function Tabs({
             />
             <Spacer />
           </div>
+          {/* TODO: Remove 'hidden' class below to re-enable the Setup Guide tab when content is ready */}
           <button
-            className={`content-stretch cursor-pointer flex flex-col min-h-[72px] items-start justify-center relative rounded-tl-[8px] rounded-tr-[8px] flex-1 min-w-0 px-3 lg:px-6 transition-colors ${isTab2Active ? "bg-white" : "bg-[#f2f0e9] hover:bg-[#BFD5D3]"}`}
+            className={`hidden content-stretch cursor-pointer flex flex-col min-h-[72px] items-start justify-center relative rounded-tl-[8px] rounded-tr-[8px] flex-1 min-w-0 px-3 lg:px-6 transition-colors ${isTab2Active ? "bg-white" : "bg-[#f2f0e9] hover:bg-[#BFD5D3]"}`}
             data-name="TabSetup"
             data-tab-active={isTab2Active}
           >

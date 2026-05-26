@@ -108,7 +108,7 @@ function Header() {
     <div className="content-stretch flex flex-col gap-[16px] items-start justify-center max-w-[992px] not-italic relative shrink-0 text-black text-center w-full" data-name="Header">
       <p className="font-['Poppins',sans-serif] font-medium leading-[38px] relative shrink-0 text-[28px] tracking-[0.6px] w-full">Choose an integration type to learn more</p>
       <div className="flex flex-col font-['Poppins',sans-serif] justify-center leading-[0] relative shrink-0 text-[16px] tracking-[1px] w-full">
-        <p className="leading-[24px]">We provide two integration options depending on what your payroll service offers. Reach out to your payroll provider to find out if they support one of these two integration options.</p>
+        <p className="leading-[24px]">We provide two integration options depending on what your payroll service offers. Reach out to your payroll provider to create the CalSavers deduction line item on your payroll platform.</p>
       </div>
     </div>
   );
@@ -457,7 +457,7 @@ function TextContainer() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start leading-[24px] min-w-px not-italic relative text-[16px] tracking-[1px]" data-name="Text Container">
       <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Set up deduction line with provider</p>
-      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">{`Reach out to your payroll provider and request to enable the CalSavers 360° integration. `}</p>
+      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">{`Reach out to your payroll provider to create the CalSavers deduction line item on your payroll platform.`}</p>
     </div>
   );
 }
@@ -572,7 +572,7 @@ function NumberContainer3() {
 function TextContainer3() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start leading-[24px] min-w-px not-italic relative text-[16px] tracking-[1px]" data-name="Text Container">
-      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Initiate Payroll Integrations LLC to register</p>
+      <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Initiate Payroll Integrations LLC flow to register for the integration</p>
       <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">You will then be taken to the Payroll Integrations Inc. connection page to start your payroll connection</p>
     </div>
   );

@@ -591,9 +591,7 @@ function Text4() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-name="Text">
       <div className="font-['Poppins',sans-serif] leading-[0] not-italic relative shrink-0 text-[#6b6b6b] text-[16px] tracking-[1px] w-full whitespace-pre-wrap">
-        <p className="leading-[24px] mb-0"><span className="[text-decoration-skip-ink:none] decoration-solid font-['Poppins',sans-serif] font-semibold leading-[24px] not-italic text-[#00594f] tracking-[1px] underline">Log in</span> and go to "Banking Information" and add a bank account that your company will use to send employee contributions.</p>
-        <p className="leading-[24px] mb-0">​</p>
-        <p className="leading-[24px]">{`If your bank account isn’t added, select “Add a bank account” to enter your routing and account numbers. You will have to option to provide a customized account nickname if you have multiple bank accounts. `}</p>
+        <p className="leading-[24px] mb-0">Once <a href="https://employer.calsavers.com/californiaertpl/enroll/createEmp/viewCollectEmpPreRegDetails.cs?request_locale=en_US" target="_blank" className="[text-decoration-skip-ink:none] decoration-solid font-['Poppins',sans-serif] font-semibold leading-[24px] not-italic text-[#00594f] tracking-[1px] underline">logged in</a> go to "Banking Information" and add a bank account that your company will use to send employee contributions.</p>
       </div>
     </div>
   );

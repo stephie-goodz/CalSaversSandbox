@@ -536,7 +536,7 @@ function TextContainer2() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start leading-[24px] min-w-px not-italic relative text-[16px] tracking-[1px]" data-name="Text Container">
       <p className="font-['Poppins',sans-serif] font-semibold relative shrink-0 text-black w-full">Log in and add a bank or select a previously added account</p>
-      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">Once Logged in, go to "Banking Information" and add a bank account that your company will use to send employee contributions.</p>
+      <p className="font-['Poppins',sans-serif] relative shrink-0 text-[#6b6b6b] w-full">Once logged in, go to "Banking Information" and add a bank account that your company will use to send employee contributions.</p>
     </div>
   );
 }
